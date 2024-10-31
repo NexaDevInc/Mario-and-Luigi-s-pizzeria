@@ -1,0 +1,156 @@
+:root {
+    --margin: 25px;
+    --padding-borderRadius-input: 6.25px;
+    --padding-borderRadius-button: 12.5px;
+    --heading: 24px;
+    --subHeading: 20px;
+    --paragraph: 16px;
+    --subParagraph: 12px;
+    --thin: 100;
+    --extraLight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+    --extraBold: 800;
+    --black: 900;
+    --color1: #F0EFF4;
+    --color2: #58641D;
+    --color3: #A22522;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    background-color: var(--color2);
+}
+
+
+.sidebar {
+    width: 200px;
+    padding: var(--margin);
+    color: var(--color1);
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.sidebar p {
+    font-size: var(--paragraph);
+    font-weight: var(--semiBold);
+    margin-top: 10%
+}
+
+
+.global-grid { 
+    padding: var(--margin);
+}
+
+.global-element h2 {
+    font-size: var(--heading);
+    color: var(--color1);
+    margin-bottom: 10px;
+    font-weight: var(--semiBold);
+    
+}
+
+.global-element {
+    margin-left: calc(200px + var(--margin));
+}
+
+.grid {
+    background-color: var(--color2);
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.element {
+    background-color: var(--color1);
+    padding: var(--margin);
+    border-radius: var(--padding-borderRadius-input);
+    width: calc(25% - 10px); 
+}
+
+.element h3 {
+    font-size: var(--subHeading);
+    color: var(--color2);
+    margin-bottom: 10px;
+    font-weight: var(--bold);
+}
+
+.element p {
+    font-size: var(--paragraph);
+    color: var(--color2);
+    margin-bottom: 5px;
+    font-weight: var(--regular);
+}
+
+
+.element button {
+    padding: 10px;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+    border-radius: var(--padding-borderRadius-button);
+    cursor: pointer;
+    font-weight: var(--bold);
+
+}
+
+.line {
+    position: absolute; 
+    height: 700px; 
+    margin: 20px; 
+    margin-left: 10vw; 
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: 20%; 
+    top: 0;
+    border-left: 1px solid white; 
+    height: 100%; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 25px;
+    color: var(--color1);
+}
+
+.admin {
+    font-size: var(--paragraph);
+    font-weight: var(--semiBold);
+    color: var(--color1);
+    font-size: 2rem;
+}
+
+.account {
+    text-align: right;
+    font-size: var(--paragraph);
+    font-weight: var(--regular);
+    color: var(--color1);
+}
+
+.account span {
+    font-weight: var(--bold);
+}
+
+.account i {
+    margin-left: 5px;
+}

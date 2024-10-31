@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../styles/styles luigi.css">
-    </head>
-    <body>
-        <div id="header">
-            <div id="header-left">
-                <h1>
-                    Admin
-                </h1>
-            </div>
-            <div id="header-right">
-                <p>
-                    Current Employee:
-                    <span>
-                        Luigi
-                    </span>
-                </p>
-                <i class="fa-regular fa-user"></i>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../../styles/stylesluigi.css">
+</head>
+<body>
+    <div class="header">
+        <div class="admin"> Admin </div>
+        <div class="account">Current Employee: <span>Luigi</span> <i class="fa-regular fa-user"></i></div>
+    </div>
+    
+    <div class="global-grid">
+        <div class="sidebar">
+            <p>Pizza Making</p>
+            <p>Orders</p>
+        <div class="line">
         </div>
-        <div id="content">
+        </div>
+        <div class="global-element">
+            <h2>New</h2>
+            <div class="grid">
+                <div class="element">
+                    <h3>{Pizza name}</h3>
+                    <p>Pizza name: {Pizza Name}</p>
+                    <p>Order time: {Order Time}</p>
+                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <button>Start</button>
+                </div>
+                <div class="element">
+                    <h3>{Pizza name}</h3>
+                    <p>Pizza name: {Pizza Name}</p>
+                    <p>Order time: {Order Time}</p>
+                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <button>Start</button>
+                </div>
+            </div>
 
+            <h2>In Progress</h2>
+            <div class="grid">
+                <div class="element">
+                    <h3>{Pizza name}</h3>
+                    <p>Pizza name: {Pizza Name}</p>
+                    <p>Order time: {Order Time}</p>
+                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <button>Finish</button>
+                </div>
+            </div>
+
+            <h2>Ready</h2>
+            <div class="grid">
+                <div class="element">
+                    <h3>{Pizza name}</h3>
+                    <p>Pizza name: {Pizza Name}</p>
+                    <p>Order time: {Order Time}</p>
+                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <button>Delete</button>
+                </div>
+            </div>
         </div>
-        <script src="../functions/functions luigi.js"></script>
-    </body>
+    </div>
+
+    <script src="../functions/functions-luigi.js"></script>
+</body>
 </html>
