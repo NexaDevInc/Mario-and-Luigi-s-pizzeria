@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delivery</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../../styles/styles delivery.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="header-left">
+                    <img src="../../images/logo.png">
+                    <h1>
+                        Delivery
+                    </h1>
+                </div>
+                <div id="header-right">
+                    <button type="button" onclick="window.location.href = '#Login'">
+                        Login
+                    </button>
+                    <button type="button" id="signup-button" onclick="window.location.href = '#Signup'">
+                        Signup
+                    </button>
+                </div>
+            </div>
+            <div id="content">
+                <div id="sidebar">
+                    <button type="button" id="back-button" onclick="window.location.href = '#Back'">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Back
+                    </button>
+                </div>
+                <div id="main-content">
+                    <form action="#">
+                        <div id="name-input">
+                            <Label for="name">
+                                <h3>
+                                    Name:
+                                </h3>
+                            </Label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name...">
+                        </div>
+                        <div id="address-input">
+                            <Label for="address">
+                                <h3>
+                                    Address:
+                                </h3>
+                            </Label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address...">
+                        </div>
+                        <div id="zip-code-input">
+                            <Label for="zip-code">
+                                <h3>
+                                    Zip-Code:
+                                </h3>
+                            </Label>
+                            <input type="text" id="zip-code" name="zip-code" placeholder="Enter your zip-code...">
+                        </div>
+                        <div id="pizza-choice-input">
+                            <Label for="pizza-choice">
+                                <h3>
+                                    Choose Pizza:
+                                </h3>
+                            </Label>
+                            <div id="pizza-choice-group">
+                                <i class="fa-solid fa-pencil"></i>
+                                <select id="pizza-choice" name="pizza-choice">
+                                    <option value="1">{1}</option>
+                                    <option value="2">{2}</option>
+                                    <option value="3">{3}</option>
+                                    <option value="4">{4}</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div id="add-more-input">
+                            <button type="button" onclick="window.location.href = '#Add More'">
+                                <i class="fa-solid fa-plus"></i>
+                                Add more
+                            </button>
+                        </div>
+                        <div id="address-same-input">
+                            <div id="checkbox">
+                                <i id="address-same-checkbox-icon" class="fa-solid fa-check"></i>
+                            </div>
+                            Billing address same as delivery address?
+                        </div>
+                        <div id="billing-address-input">
+                            <Label for="billing-address">
+                                <h3>
+                                    Billing Address:
+                                </h3>
+                            </Label>
+                            <input type="text" id="billing-address" name="billing-address" placeholder="Enter your billing address...">
+                        </div>
+                        <div id="delivery-time-input">
+                            <Label for="delivery-time">
+                                <h3>
+                                    Delivery Time:
+                                </h3>
+                            </Label>
+                            <div id="delivery-time-group">
+                                <select id="delivery-time" name="delivery-time">
+                                    <option value="1">{1}</option>
+                                    <option value="2">{2}</option>
+                                    <option value="3">{3}</option>
+                                    <option value="4">{4}</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div id="total-amount-checkout-button">
+                            <span>
+                                Total: €
+                                <span>
+                                    0,00
+                                </span>
+                            </span>
+                            <button type="button" id="checkout-button" onclick="window.location.href = '#Checkout'">
+                                Checkout
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../../functions/functions delivery.js"></script>
+    </body>
+</html>
