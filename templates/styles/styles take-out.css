@@ -1,0 +1,182 @@
+:root {
+    --thin: 100;
+    --extraLight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+    --extraBold: 800;
+    --black: 900;
+    --color1: #F0EFF4;
+    --color2: #58641D;
+    --color3: #A22522;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    font-size: var(--paragraph);
+    color: var(--color1);
+    background-color: #58641D;
+}
+
+#container {
+    width: 50vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25vw;
+    height: 125px;
+    background-color: var(--color2);
+    z-index: 10;
+}
+
+#header-left {
+    display: flex;
+    align-items: center;
+    color: var(--color1);
+}
+
+img {
+    height: 75px;
+    border-radius: 100%;
+    margin: 0 75px 0 0;
+}
+
+#header-right {
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+}
+
+button {
+    all: unset;
+    display: flex;
+    align-self: flex-start;
+    gap: 6.25px;
+    padding: 12.5px;
+    border-radius: 12.5px;
+    border: 2px solid var(--color1);
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+}
+button:hover {
+    background-color: var(--color3);
+}
+
+#signup-button, #checkout-button {
+    background-color: var(--color3);
+    border: 2px solid var(--color3);
+}
+
+#signup-button:hover, #checkout-button:hover {
+    border: 2px solid var(--color1);
+}
+
+#content {
+    padding: 175px 0 75px 0;
+    display: flex;
+}
+
+#sidebar {
+    width: 150px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 281.25px);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+        "name ."
+        "billing-address take-out-time"
+        "pizza-choice amount-checkout"
+        "add-more amount-checkout";
+    gap: 25px 50px;
+}
+
+#name-input {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+}
+
+#pizza-choice-input {
+    grid-area: pizza-choice;
+    display: flex;
+    flex-direction: column;
+}
+
+#add-more-input {
+    grid-area: add-more;
+    display: flex;
+    flex-direction: column;
+}
+
+#billing-address-input {
+    grid-area: billing-address;
+    display: flex;
+    flex-direction: column;
+}
+
+#take-out-time-input {
+    grid-area: take-out-time;
+    display: flex;
+    flex-direction: column;
+}
+
+#total-amount-checkout-button {
+    grid-area: amount-checkout;
+    margin: 14.75px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+input {
+    all: unset;
+    padding: 6.25px;
+    border-radius: 6.25px;
+    color: var(--color2);
+    background-color: var(--color1);
+}
+#pizza-choice-group, #take-out-time-group {
+    display: flex;
+    padding: 6.25px;
+    gap: 6.25px;
+    border-radius: 6.25px;
+    align-items: center;
+    justify-content: space-between;
+    color: #58641D;
+    background-color: #F0EFF4;
+}
+select {
+    all: unset;
+    width: 100%;
+    text-align: left;
+}
+
+@media screen and (min-width: 320px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    
+}
