@@ -3,21 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Delivery</title>
+        <title>Take-out</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../../styles/styles delivery.css">
-        <link rel="icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../static/css/styles take-out.css">
+        <link rel="icon" href="../static/img/logo.png">
     </head>
     <body>
         <div id="container">
             <div id="header">
                 <div id="header-left">
-                    <img src="../../images/logo.png">
+                    <img src="../static/img/logo.png">
                     <h1>
-                        Delivery
+                        Take-out
                     </h1>
                 </div>
                 <div id="header-right">
@@ -46,22 +46,6 @@
                             </Label>
                             <input type="text" id="name" name="name" placeholder="Enter your name...">
                         </div>
-                        <div id="address-input">
-                            <Label for="address">
-                                <h3>
-                                    Address:
-                                </h3>
-                            </Label>
-                            <input type="text" id="address" name="address" placeholder="Enter your address...">
-                        </div>
-                        <div id="zip-code-input">
-                            <Label for="zip-code">
-                                <h3>
-                                    Zip-Code:
-                                </h3>
-                            </Label>
-                            <input type="text" id="zip-code" name="zip-code" placeholder="Enter your zip-code...">
-                        </div>
                         <div id="pizza-choice-input">
                             <Label for="pizza-choice">
                                 <h3>
@@ -85,12 +69,6 @@
                                 Add more
                             </button>
                         </div>
-                        <div id="address-same-input">
-                            <div id="checkbox">
-                                <i id="address-same-checkbox-icon" class="fa-solid fa-check"></i>
-                            </div>
-                            Billing address same as delivery address?
-                        </div>
                         <div id="billing-address-input">
                             <Label for="billing-address">
                                 <h3>
@@ -99,14 +77,14 @@
                             </Label>
                             <input type="text" id="billing-address" name="billing-address" placeholder="Enter your billing address...">
                         </div>
-                        <div id="delivery-time-input">
-                            <Label for="delivery-time">
+                        <div id="take-out-time-input">
+                            <Label for="take-out-time">
                                 <h3>
-                                    Delivery Time:
+                                    Take-out Time:
                                 </h3>
                             </Label>
-                            <div id="delivery-time-group">
-                                <select id="delivery-time" name="delivery-time">
+                            <div id="take-out-time-group">
+                                <select id="take-out-time" name="take-out-time">
                                     <option value="1">{1}</option>
                                     <option value="2">{2}</option>
                                     <option value="3">{3}</option>
@@ -122,7 +100,7 @@
                                     0,00
                                 </span>
                             </span>
-                            <button type="button" id="checkout-button" onclick="window.location.href = '#Checkout'">
+                            <button id="checkout-button" type="button" onclick="window.location.href = '#Checkout'">
                                 Checkout
                             </button>
                         </div>
@@ -130,6 +108,6 @@
                 </div>
             </div>
         </div>
-        <script src="../../functions/functions delivery.js"></script>
+        <script src="../static/js/functions take-out.js"></script>
     </body>
 </html>
