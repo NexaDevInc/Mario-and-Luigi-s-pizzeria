@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="'../static/css/styles mario.css'">
-    </head>
-    <body>
-        <div id="header">
-            <div id="header-left">
-                <h1>
-                    Admin
-                </h1>
-            </div>
-            <div id="header-right">
-                <p>
-                    Current Employee:
-                    <span>
-                        Mario
-                    </span>
-                </p>
-                <i class="fa-regular fa-user"></i>
-            </div>
-        </div>
-        <div id="content">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/styles mario.css"> 
+</head>
+<body>
+    <div class="line"></div>
+    <div class="sidebar">
+        <p>-Pizza Making</p>
+        <a href = "luigi.css" style="text-decoration: none; color: white;"> <p>Orders</p></a>
+    </div>
+    <div class="header">
+        <div class="admin"> Admin </div>
+        <div class="account">Current Employee: <span>Mario</span> <i class="fa-regular fa-user"></i></div>
+    </div>
+    <div id="content">
+        <form id="pizza-form">
+            <label for="pizza-name" class="pizza-text">Pizza Name:</label>
+            <input type="text" id="pizza-name" placeholder="Enter the pizza name...">
 
-        </div>
-        <script src="../static/js/functions mario.js"></script>
-    </body>
+            <label class="pizza-text">Ingredients:</label> 
+            <div class="ingredients-list">
+                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Tomato"> Tomato</label>
+                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Cheese"> Cheese</label>
+                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Pepperoni"> Pepperoni</label>
+                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Olives"> Olives</label>
+                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Mushrooms"> Mushrooms</label>
+                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Onions"> Onions</label>
+            </div>
+
+            <label for="pizza-description" class="pizza-text">Pizza Description:</label>
+            <textarea id="pizza-description" class="pizza-text" placeholder="Enter the pizza description..."></textarea>
+
+            <button type="submit">Add to Menu</button>
+        </form>
+    </div>
+    <script src="../static/js/functions_mario.js"></script>
+</body>
 </html>
