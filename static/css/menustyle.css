@@ -1,0 +1,77 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Article styling */
+article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pizza menu container */
+#pizza-menu {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+}
+
+/* Pizza item styling */
+.pizza-item {
+    margin-bottom: 15px;
+}
+
+.pizza-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.description {
+    color: #555;
+    margin: 5px 0;
+}
+
+.size-options, .toppings {
+    margin: 10px 0;
+}
+
+/* Strong tags */
+strong {
+    color: #000;
+}
+
+/* Form styling */
+form {
+    margin-top: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
