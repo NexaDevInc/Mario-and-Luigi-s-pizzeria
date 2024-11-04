@@ -3,26 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin Login</title>
+        <title>Login</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="styles/styles login.css">
+        <link rel="stylesheet" href="../static/css/styles_login.css">
+        <link rel="icon" href="../static/img/logo.png">
     </head>
     <body>
         <h1>
-            Admin Login
+            Login
         </h1>
         <form action="/login" method="post">
-            <label for="username">Username:</label>
+            <label for="username">
+                <h3>
+                    Username:
+                </h3>
+            </label>
             <input type="text" id="username" name="username" placeholder="Enter your username..." required>
         
-            <label for="password">Password:</label>
+            <label for="password">
+                <h3>
+                    Password:
+                </h3>
+            </label>
             <input type="password" id="password" name="password" placeholder="Enter your password..." required>
+
+            <a href="/register">You don't have an account yet?</a>
         
             <button type="submit">Login</button>
         </form>
-        <script src="functions/functions login.js"></script>
+        <script src="../static/js/functions_login.js"></script>
     </body>
 </html>
