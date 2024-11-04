@@ -162,13 +162,11 @@
                             </button>
                         </div>
                         <div id="address-same-input" role="checkbox" aria-checked="false">
-                            <div id="address-same-checkbox">
-                                <i id="address-same-checkbox-icon" class="fa-solid fa-check"></i>
-                            </div>
-                            Billing address same as delivery address?
+                            <input type="checkbox" id="checkbox">
+                            <label for="address-same-checkbox">Billing address same as delivery address?</label>
                         </div>
                         <div id="billing-address-input">
-                            <Label for="billing-address">
+                            <Label for="billing-address" id="billing-address-label">
                                 <h3>
                                     Billing Address:
                                 </h3>
@@ -182,9 +180,7 @@
                                 </h3>
                             </Label>
                             <div id="delivery-time-group">
-                                <select id="delivery-time" name="delivery-time">
-                                    
-                                </select>
+                                <select id="delivery-time" name="delivery-time"></select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
