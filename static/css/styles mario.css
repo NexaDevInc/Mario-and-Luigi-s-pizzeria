@@ -5,7 +5,7 @@
     --heading: 24px;
     --subHeading: 20px;
     --paragraph: 16px;
-    --subParagraph: 12px;
+    --subParagraph: 12px; 
     --thin: 100;
     --extraLight: 200;
     --light: 300;
@@ -25,16 +25,150 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
 }
-body, form, h1, label, input, button {
-    all: unset;
+
+body {
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: var(--paragraph);
 }
-#header {
-    width: 100vw;
+
+.header {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px; 
+    color: var(--color1);
     position: fixed;
+    width: 100%;
+    height: 80px; 
+    top: 20px; 
+    background-color: var(--color2);
+}
+
+#content {
+    margin-top: 80px;
+    padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+#pizza-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#pizza-form label {
+    font-size: var(--subHeading); 
+    font-weight: var(--bold); 
+}
+
+.pizza-text {
+    font-size: var(--paragraph); 
+    font-weight: var(--regular); 
+}
+
+#pizza-form input[type="text"], #pizza-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color1);
+    border-radius: var(--padding-borderRadius-input);
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+#pizza-form textarea {
+    height: 100px;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ingredients-list label {
+    font-size: var(--subParagraph); 
+    font-weight: var(--subParagraph); 
+    display: block; 
+}
+
+#pizza-form button {
+    padding: 12px;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+    border-radius: var(--padding-borderRadius-button);
+    font-weight: var(--bold);
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--paragraph);
+    width: 40%;
+    margin-right: 0;
+    margin-left: auto; 
+}
+
+.admin {
+    font-size: var(--paragraph);
+    font-weight: var(--semiBold);
+    color: var(--color1);
+    font-size: 2rem;
+    margin-right: auto;
+}
+
+.account {
+    font-size: var(--paragraph);
+    font-weight: var(--regular);
+    color: var(--color1);
+    text-align: right;
+}
+
+.account span {
+    font-weight: var(--bold);
+}
+
+.account i {
+    margin-left: 5px;
+}
+
+.sidebar {
+    width: 200px;
+    padding: var(--margin); 
+    color: var(--color1);
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px; 
+    margin-left: 30px; 
+}
+
+.sidebar p {
+    font-size: var(--paragraph);
+    font-weight: var(--semiBold);
+    color: var(--color1);
+    text-align: left; 
+    margin-top: 15px; 
+    margin-left: 15px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.line {
+    position: absolute;
+    height: 600px; 
+    margin-left: 15vw; 
+    top: 150px
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: 30%; 
     top: 0;
-    left: 0;
+    border-left: 1px solid white;
+    height: 100%;
 }
