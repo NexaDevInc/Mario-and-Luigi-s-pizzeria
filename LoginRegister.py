@@ -1,7 +1,9 @@
 from flask import render_template, request, redirect, Blueprint, flash
+from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 import os
 import json
+
 
 LoginRegister_Blueprint = Blueprint('LoginRegister', __name__)
 
@@ -69,6 +71,7 @@ def register_person():
     if any(profile['username'] == username for profile in profiles):
         flash("Username already taken")
         return redirect('/register')
+    
     
     
     newPerson = {'id': str(id), 'username': username, 'password': password, 'email': email}
