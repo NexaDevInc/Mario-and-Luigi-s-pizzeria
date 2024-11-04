@@ -1,6 +1,12 @@
 from flask import Flask, render_template
-
+from Menu import Menu_Blueprint
+from LoginRegister import LoginRegister_Blueprint
 app = Flask(__name__)
+
+app.register_blueprint(Menu_Blueprint)
+app.register_blueprint(LoginRegister_Blueprint)
+
+
 
 @app.route('/delivery')
 def show_deliveryPage():
