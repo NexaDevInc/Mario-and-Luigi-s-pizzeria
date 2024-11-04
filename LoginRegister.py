@@ -45,14 +45,15 @@ def login_person():
     password = request.form['password']
     
     profiles = load_data_from_json()
-    persondata = next((profile for profile in profiles if profile['username'] == username and profile['password'] == password), None)
+    persondata = next((profile for profile in profiles if profile['username'] == username), None)
     
 
     if persondata and check_password_hash(persondata['password'], password):
+            print("Check", check_password_hash(persondata['password'], password))
             return redirect('/home')
     else:
         flash("Invalid username or password")
-        return redirect('/')
+        return redirect('/login')
 
 @LoginRegister_Blueprint.route('/register')
 def show_register():
@@ -73,6 +74,7 @@ def register_person():
         return redirect('/register')
     
     hashed_password = generate_password_hash(password)
+    print("save", hashed_password)
     
     newPerson = {'id': str(id), 'username': username, 'password': hashed_password, 'email': email}
     profiles.append(newPerson)
@@ -80,7 +82,7 @@ def register_person():
     print(profiles)
     saveData_JSON(profiles)
         
-    return redirect('/')
+    return redirect('/login')
 
 
 
