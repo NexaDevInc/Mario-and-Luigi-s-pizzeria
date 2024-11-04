@@ -186,7 +186,7 @@ select {
     cursor: pointer;
 }
 
-#checkbox {
+#address-same-checkbox {
     width: 31.5px;
     height: 31.5px;
     aspect-ratio: 1;
@@ -195,6 +195,7 @@ select {
     justify-content: center;
     align-items: center;
     border: 2px solid var(--color1);
+    cursor: pointer;
 }
 
 #pizza-editting-modal-aligner {

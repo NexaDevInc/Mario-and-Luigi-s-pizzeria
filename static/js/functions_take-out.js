@@ -1,9 +1,7 @@
-const pizzaModal = document.getElementById('pizza-editting-modal-aligner')
-
-function openModal() {
-    pizzaModal.style.display = 'flex';
-}
-
-function closeModal() {
-    pizzaModal.style.display = 'none';
-}
+generateTimeSlots(openingTime, closingTime).forEach(slot => {
+    const takeOutTimeSlotSelect = document.getElementById('take-out-time');
+    const option = document.createElement('option');
+    option.value = slot.time;
+    option.textContent = `${slot.time}`;
+    takeOutTimeSlotSelect.appendChild(option);
+});

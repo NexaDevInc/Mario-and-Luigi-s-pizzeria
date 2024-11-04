@@ -22,10 +22,10 @@
                     </h1>
                 </div>
                 <div id="header-right">
-                    <button type="button" onclick="window.location.href = '#Login'">
+                    <button type="button" onclick="window.location.href = '/Login'">
                         Login
                     </button>
-                    <button type="button" id="signup-button" onclick="window.location.href = '#Signup'">
+                    <button type="button" id="signup-button" onclick="window.location.href = '/register'">
                         Signup
                     </button>
                 </div>
@@ -153,6 +153,7 @@
                                 </select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
+                            <div id="pizza-edits"></div>
                         </div>
                         <div id="add-more-input">
                             <button type="button" onclick="window.location.href = '#Add More'">
@@ -160,8 +161,8 @@
                                 Add more
                             </button>
                         </div>
-                        <div id="address-same-input">
-                            <div id="checkbox">
+                        <div id="address-same-input" role="checkbox" aria-checked="false">
+                            <div id="address-same-checkbox">
                                 <i id="address-same-checkbox-icon" class="fa-solid fa-check"></i>
                             </div>
                             Billing address same as delivery address?
@@ -182,10 +183,7 @@
                             </Label>
                             <div id="delivery-time-group">
                                 <select id="delivery-time" name="delivery-time">
-                                    <option value="1">{delivery time choice}</option>
-                                    <option value="2">{delivery time choice}</option>
-                                    <option value="3">{delivery time choice}</option>
-                                    <option value="4">{delivery time choice}</option>
+                                    
                                 </select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
@@ -205,6 +203,7 @@
                 </div>
             </div>
         </div>
+        <script src="../static/js/functions_shared.js"></script>
         <script src="../static/js/functions_delivery.js"></script>
     </body>
 </html>
