@@ -46,76 +46,10 @@ body {
     background-color: var(--color2);
 }
 
-#content {
-    margin-top: 80px;
-    padding: 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-}
-
-#pizza-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#pizza-form label {
-    font-size: var(--subHeading); 
-    font-weight: var(--bold); 
-}
-
-.pizza-text {
-    font-size: var(--paragraph); 
-    font-weight: var(--regular); 
-}
-
-#pizza-form input[type="text"], #pizza-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--color1);
-    border-radius: var(--padding-borderRadius-input);
-    background-color: var(--color1);
-    color: var(--color2);
-}
-
-#pizza-form textarea {
-    height: 100px;
-}
-
-.ingredients-list {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.ingredients-list label {
-    font-size: var(--subParagraph); 
-    font-weight: var(--subParagraph); 
-    display: block; 
-}
-
-#pizza-form button {
-    padding: 12px;
-    background-color: var(--color3);
-    color: var(--color1);
-    border: none;
-    border-radius: var(--padding-borderRadius-button);
-    font-weight: var(--bold);
-    cursor: pointer;
-    text-align: center;
-    font-size: var(--paragraph);
-    width: 40%;
-    margin-right: 0;
-    margin-left: auto; 
-}
-
 .admin {
-    font-size: var(--paragraph);
+    font-size: 2rem;
     font-weight: var(--semiBold);
     color: var(--color1);
-    font-size: 2rem;
     margin-right: auto;
 }
 
@@ -142,26 +76,21 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 100px; 
+    margin-top: 50px; 
     margin-left: 30px; 
 }
 
 .sidebar p {
     font-size: var(--paragraph);
     font-weight: var(--semiBold);
-    color: var(--color1);
-    text-align: left; 
-    margin-top: 15px; 
-    margin-left: 15px; 
-    display: flex; 
-    align-items: center; 
+    margin-top: 20%;
 }
 
 .line {
-    position: absolute;
+    position: absolute; 
     height: 600px; 
-    margin-left: 15vw; 
-    top: 150px
+    margin: 20px; 
+    margin-left: 10vw;
 }
 
 .line::before {
@@ -171,4 +100,89 @@ body {
     top: 0;
     border-left: 1px solid white;
     height: 100%;
+}
+
+#content {
+    margin-top: 80px;
+    padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+label.pizza-text {
+    font-size: var(--subHeading);
+    font-weight: var(--bold);
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color1);
+    border-radius: var(--padding-borderRadius-input);
+    background-color: var(--color1);
+    color: var(--color2);
+    font-size: var(--paragraph);
+}
+
+input[type="number"] {
+    appearance: textfield; 
+}
+
+textarea {
+    height: 100px;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.ingredients-list label {
+    font-size: var(--subParagraph);
+    font-weight: var(--regular);
+    display: flex;
+    align-items: center;
+}
+
+.ingredients-list input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px; /* Increase this to move the button lower */
+    padding-right: 0px; /* Adjust if you want the button to be even more to the right */
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+    border-radius: var(--padding-borderRadius-button);
+    font-weight: var(--bold);
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--paragraph);
+    width: 50%;
+    max-width: 200px;
+    margin-right: 0;
+    margin-left: auto;
 }

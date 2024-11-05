@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin - Add New Pizza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -11,36 +11,56 @@
     <link rel="stylesheet" href="../static/css/styles mario.css"> 
 </head>
 <body>
-    <div class="line"></div>
     <div class="sidebar">
+        <div class="line"></div>
         <p>-Pizza Making</p>
-        <a href = "luigi.css" style="text-decoration: none; color: white;"> <p>Orders</p></a>
+        <p>Orders</p>
     </div>
     <div class="header">
-        <div class="admin"> Admin </div>
+        <div class="admin">Admin</div>
         <div class="account">Current Employee: <span>Mario</span> <i class="fa-regular fa-user"></i></div>
     </div>
-    <div id="content">
-        <form id="pizza-form">
+    
+    <form action="http://127.0.0.1:5000/submit" method="post">
+
+        <div id="content">
             <label for="pizza-name" class="pizza-text">Pizza Name:</label>
-            <input type="text" id="pizza-name" placeholder="Enter the pizza name...">
+            <input type="text" id="pizza-name" name="pizzaName" placeholder="Enter the pizza name..." required>
 
             <label class="pizza-text">Ingredients:</label> 
             <div class="ingredients-list">
-                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Tomato"> Tomato</label>
-                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Cheese"> Cheese</label>
-                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Pepperoni"> Pepperoni</label>
-                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Olives"> Olives</label>
-                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Mushrooms"> Mushrooms</label>
-                <label class="pizza-text"><input type="checkbox" name="ingredient" value="Onions"> Onions</label>
+                <label class="pizza-text"><input type="checkbox" name="ingridient" value="Tomato"> Tomato</label>
+                <label class="pizza-text"><input type="checkbox" name="ingridient" value="Cheese"> Cheese</label>
+                <label class="pizza-text"><input type="checkbox" name="ingridient" value="Pepperoni"> Pepperoni</label>
+                <label class="pizza-text"><input type="checkbox" name="ingridient" value="Olives"> Olives</label>
+                <label class="pizza-text"><input type="checkbox" name="ingridient" value="Mushrooms"> Mushrooms</label>
+                <label class="pizza-text"><input type="checkbox" name="ingridient" value="Onions"> Onions</label>
             </div>
 
             <label for="pizza-description" class="pizza-text">Pizza Description:</label>
-            <textarea id="pizza-description" class="pizza-text" placeholder="Enter the pizza description..."></textarea>
+            <textarea id="pizza-description" name="description" class="pizza-text" placeholder="Enter the pizza description..." required></textarea>
 
-            <button type="submit">Add to Menu</button>
-        </form>
-    </div>
+            <label for="small-price" class="pizza-text">Small Pizza Price:</label>
+            <input type="number" id="small-price" name="small" placeholder="Small size price" required step="0.1">
+
+            <label for="medium-price" class="pizza-text">Medium Pizza Price:</label>
+            <input type="number" id="medium-price" name="medium" placeholder="Medium size price" required step="0.1">
+
+            <label for="large-price" class="pizza-text">Large Pizza Price:</label>
+            <input type="number" id="large-price" name="large" placeholder="Large size price" required step="0.1">
+
+            <label for="calories" class="pizza-text">Calories:</label>
+            <input type="number" id="calories" name="calories" placeholder="Calories" required>
+
+            <label class="pizza-text">Vegetarian:</label>
+            <input type="checkbox" id="vegetarian" name="vegetarian" value="true">
+            
+            <div class="button-container">
+                <button type="submit">Add to Menu</button>
+            </div>
+        </div>
+    </form>
+    
     <script src="../static/js/functions mario.js"></script>
 </body>
 </html>
