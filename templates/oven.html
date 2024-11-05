@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oven Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Oven Control</h1>
+    <div class="grid_container">
+        <div class="grid_item">
+            <img src="{{ url_for('static', filename='oven.png')}}" alt="oven1">
+            <button id="redButtonStart" class = "start" onclick="toggleLED('RedLedOn')">Oven 1 start</button>
+            <button id="redButtonStop" class = "stop" onclick="toggleLED('RedLedOff')">Oven 1 stop</button>
+            <button id="redButtonReset" class = "reset">Reset oven 1 timer</button>
+            <span id="redTimer">15:00</span>
+        </div>
+        
+        <div class="grid_item">
+            <img src="{{ url_for('static', filename='oven.png')}}" alt="oven2">
+            <button id="greenButtonStart" class = "start" onclick="toggleLED('GreenLedOn')">Oven 2 start</button>
+            <button id="greenButtonStop" class = "stop" onclick="toggleLED('GreenLedOff')">Oven 2 stop</button>
+            <button id="greenButtonReset" class = "reset">Reset oven 2 timer</button>
+            <span id="greenTimer">15:00</span>
+        </div>
+
+        <div class="grid_item">
+            <img src="{{ url_for('static', filename='oven.png')}}" alt="oven3">
+            <button id="blueButtonStart" class = "start" onclick="toggleLED('BlueLedOn')">Oven 3 start</button>
+            <button id="blueButtonStop" class = "stop" onclick="toggleLED('BlueLedOff')">Oven 3 stop</button>
+            <button id="blueButtonReset" class = "reset">Reset oven 3 timer</button>
+            <span id="blueTimer">15:00</span>
+        </div>
+        
+        <div class="grid_item">
+            <img src="{{ url_for('static', filename='oven.png')}}" alt="oven4">
+            <button id="yellowButtonStart" class = "start" onclick="toggleLED('YellowLedOn')">Oven 4 start</button>
+            <button id="yellowButtonStop" class = "stop" onclick="toggleLED('YellowLedOff')">Oven 4 stop</button>
+            <button id="blueButtonReset" class = "reset">Reset oven 4 timer</button>
+            <span id="yellowTimer">15:00</span>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
