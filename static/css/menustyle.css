@@ -1,14 +1,89 @@
-/* Reset some default styles */
-body {
+:root {
+    --color1: #F0EFF4;
+    --color2: #58641D;
+    --color3: #A22522;
+}
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    color: black;
+    background-color: var(--color2);
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25vw;
+    height: 125px;
+    background-color: #3e4710;
+    z-index: 10;
+}
+
+#header-left {
+    display: flex;
+    align-items: center;
+    color: var(--color1);
+}
+
+img {
+    height: 75px;
+    border-radius: 100%;
+    margin: 0 75px 0 0;
+}
+
+#header-right {
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+}
+
+button {
+    all: unset;
+    display: flex;
+    align-self: flex-start;
+    gap: 6.25px;
+    padding: 12.5px;
+    border-radius: 12.5px;
+    border: 2px solid var(--color1);
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    color: var(--color1);
+}
+button:hover {
+    background-color: var(--color3);
+}
+
+#signup-button, #checkout-button, #save-button {
+    background-color: var(--color3);
+    border: 2px solid var(--color3);
+}
+
+#signup-button:hover, #checkout-button:hover {
+    border: 2px solid var(--color1);
 }
 
 /* Article styling */
 article {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 750px;
+    margin: 30px auto;
+    margin-top: 90px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -22,6 +97,10 @@ article {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f3f3f3;
+}
+ul{
+    margin-left: 30px;
+    margin-right: auto;
 }
 
 /* Pizza item styling */

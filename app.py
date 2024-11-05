@@ -88,6 +88,10 @@ def show_home():
 def show_menu():
     return render_template("menu.html")
 
+""" @app.route('/cart')
+def show_menu():
+    return render_template("cart.html") """
+
 # @app.route('/oven')
 # def index():
 #     return render_template("oven.html")
