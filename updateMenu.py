@@ -46,7 +46,7 @@ def add_new_pizza():
     small_price = request.form.get('small')
     medium_price = request.form.get('medium')
     large_price = request.form.get('large')
-    vegetarian = request.form.get('vegetarian') == 'true'
+    vegetarian = request.form.get('vegetarian')
     calories = request.form.get('calories')
 
     pizzas = load_data_from_json()

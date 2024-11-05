@@ -68,7 +68,6 @@ body {
     margin-left: 5px;
 }
 
-
 .sidebar {
     width: 200px;
     padding: var(--margin); 
@@ -112,10 +111,11 @@ body {
     max-width: 600px;
 }
 
-form {
+.form-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 }
 
 label.pizza-text {
@@ -147,6 +147,8 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .ingredients-list label {
@@ -162,6 +164,13 @@ textarea {
     margin-right: 8px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px; /* Increase this to move the button lower */
+    padding-right: 0px; /* Adjust if you want the button to be even more to the right */
+}
+
 button[type="submit"] {
     padding: 12px;
     background-color: var(--color3);
@@ -172,5 +181,8 @@ button[type="submit"] {
     cursor: pointer;
     text-align: center;
     font-size: var(--paragraph);
-    width: 40%; 
+    width: 50%;
+    max-width: 200px;
+    margin-right: 0;
+    margin-left: auto;
 }
