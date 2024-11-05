@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/menustyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="../static/js/main.js" type="module"></script>
+    <script>
+        const menu_path = "{{ url_for('static', filename='data/Menu.json') }}";
+    </script>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
     <title>Menu</title>
 </head>
 
