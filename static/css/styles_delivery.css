@@ -125,12 +125,6 @@ button:hover {
     flex-direction: column;
 }
 
-#add-more-input {
-    grid-area: add-more;
-    display: flex;
-    flex-direction: column;
-}
-
 #address-same-input {
     grid-area: address-same;
     margin: 20px 0 0 0;

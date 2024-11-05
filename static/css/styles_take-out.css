@@ -96,7 +96,7 @@ button:hover {
         "name ."
         "billing-address take-out-time"
         "pizza-choice amount-checkout"
-        "add-more amount-checkout";
+        "pizza-choice amount-checkout";
     gap: 25px 50px;
 }
 

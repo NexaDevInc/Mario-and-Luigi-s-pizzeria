@@ -27,8 +27,8 @@ function generateTimeSlots(openingTime, closingTime) {
 
     return slots;
 }
-const openingTime = "14:00";
-const closingTime = "22:00";
+const openingTime = "11:00";
+const closingTime = "21:00";
 const timeSlots = generateTimeSlots(openingTime, closingTime);
 
 fetch('../static/data/Ingridients.json')
@@ -54,5 +54,24 @@ fetch('../static/data/Ingridients.json')
             ingredientCounter.setAttribute('blh-counter-background-color', "transparent");
             ingredientCounter.setAttribute('blh-counter-active-background-color', "#58641D");
             ingredientRow.appendChild(ingredientCounter);
+        });
+    });
+
+    fetch('../static/data/Menu.json')
+    .then(response => response.json())
+    .then(data => {
+        const pizzaChoice = document.getElementById('pizza-choice');
+        data.forEach(pizza => {
+            const pizzaOption = document.createElement('option');
+            pizzaOption.textContent = pizza.name;
+            pizzaOption.value = pizza.name;
+            pizzaChoice.appendChild(pizzaOption);
+        });
+
+        const modalHeading = document.querySelector('h2');
+        modalHeading.textContent = "Edit " + pizzaChoice.value;
+
+        pizzaChoice.addEventListener('input', () => {
+            modalHeading.textContent = "Edit " + pizzaChoice.value;
         });
     });
