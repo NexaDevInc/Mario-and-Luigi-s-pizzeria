@@ -31,9 +31,28 @@ const openingTime = "14:00";
 const closingTime = "22:00";
 const timeSlots = generateTimeSlots(openingTime, closingTime);
 
-timeSlots.forEach(slot => {
-    const option = document.createElement('option');
-    option.value = slot.time;
-    option.textContent = `${slot.time}`;
-    deliveryTimeSlotSelect.appendChild(takeOutTimeSlotSelect);
-});    
+fetch('../static/data/Ingridients.json')
+    .then(response => response.json())
+    .then(data => {
+        const ingredientGroup = document.getElementById('ingredients-group');
+        data.forEach(ingredient => {
+            const ingredientRow = document.createElement('div');
+            ingredientRow.className = 'ingredient';
+            ingredientGroup.appendChild(ingredientRow);
+
+            const ingredientLabel = document.createElement('p');
+            ingredientLabel.textContent = ingredient.Topping;
+            ingredientRow.appendChild(ingredientLabel);
+
+            const ingredientCounter = document.createElement('blh-counter');
+            ingredientCounter.setAttribute('blh-counter-input-placeholder', "1");
+            ingredientCounter.setAttribute('blh-counter-input-minimum', "0");
+            ingredientCounter.setAttribute('blh-counter-input-maximum', "10");
+            ingredientCounter.setAttribute('blh-counter-input-step', "1");
+            ingredientCounter.setAttribute('blh-counter-color', "#58641D");
+            ingredientCounter.setAttribute('blh-counter-active-color', "#F0EFF4");
+            ingredientCounter.setAttribute('blh-counter-background-color', "transparent");
+            ingredientCounter.setAttribute('blh-counter-active-background-color', "#58641D");
+            ingredientRow.appendChild(ingredientCounter);
+        });
+    });
