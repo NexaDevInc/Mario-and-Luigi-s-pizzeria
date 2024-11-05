@@ -6,6 +6,9 @@ import os
 import json
 app = Flask(__name__)
 
+
+ser = serial.Serial("COM4", baudrate=9600, timeout=1)
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_DIR = os.path.join(DATA_DIR, 'data')
@@ -31,18 +34,8 @@ def load_data_from_json():
 
 app.secret_key = "TopSecretKey"
 
-@app.route('/login')
-def show_loginPage():
-    return render_template("login.html")
-
-@app.route('/register')
-def show_registerPage():
-    return render_template("register.html")
-
 app.register_blueprint(Menu_Blueprint)
 app.register_blueprint(LoginRegister_Blueprint)
-
-
 
 @app.route('/delivery')
 def show_deliveryPage():
@@ -86,7 +79,6 @@ def get_take_out_form_values():
 def show_home():
     return render_template("home.html")
 
-ser = serial.Serial("COM4", baudrate=9600, timeout=1)
 
 @app.route('/oven')
 def index():
@@ -112,4 +104,4 @@ def toggle_led():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

@@ -4,7 +4,7 @@ import MenuItems from "../view/MenuItemsView.js";
 class MenuController{
     constructor(){
 
-        const menu_path = "../data/Menu.json"
+       /*  const menu_path = "{{ url_for('data', filename='Menu.json') }}" */
         const model = new Model();
         
         
