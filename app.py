@@ -1,21 +1,23 @@
-from flask import Flask, render_template, request, jsonify
-from Menu import Menu_Blueprint
+from flask import Flask, render_template, request, jsonify, redirect, flash
+
 from LoginRegister import LoginRegister_Blueprint
+from updateMenu import newFood_Blueprint
 import serial
 import os
 import json
 app = Flask(__name__)
 
 
-ser = serial.Serial("COM4", baudrate=9600, timeout=1)
+# ser = serial.Serial("/dev/cu.usbserial-1120", baudrate=9600, timeout=1)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, 'data')
+DATA_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(DATA_DIR, 'data')
 
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-json_file_path = os.path.join(DATA_DIR, 'orders.json')
+json_file_path = os.path.join(STATIC_DIR, 'orders.json')
 
 def saveData_JSON(orders):
     with open(json_file_path, 'w') as json_file:
@@ -33,8 +35,8 @@ def load_data_from_json():
 
 app.secret_key = "TopSecretKey"
 
-app.register_blueprint(Menu_Blueprint)
 app.register_blueprint(LoginRegister_Blueprint)
+app.register_blueprint(newFood_Blueprint)
 
 @app.route('/delivery')
 def show_deliveryPage():
@@ -42,19 +44,21 @@ def show_deliveryPage():
 
 @app.route('/delivery', methods = ['POST'])
 def get_delivery_form_values():
-    deliveryName = request.form.get["name"]
-    deliveryAddress = request.form.get["address"]
-    deliveryBillingAddress = request.form.get["billing-address"]
-    deliveryZipCode = request.form.get["zip-code"]
-    deliveryTime = request.form.get["delivery-time"]
-    deliveryPizzaChoice = request.form.get["pizza-choice"]
+    deliveryName = request.form["name"]
+    deliveryAddress = request.form["address"]
+    deliveryBillingAddress = request.form["billing-address"]
+    deliveryZipCode = request.form["zip-code"]
+    deliveryTime = request.form["delivery-time"]
+    deliveryPizzaChoice = request.form["pizza-choice"]
+    status = "Delivery"
 
     orders = load_data_from_json()
     
-    newOrder = {'name': deliveryName, 'address': deliveryAddress, 'billing-address': deliveryBillingAddress, 'zip-code': deliveryZipCode, 'time': deliveryTime, 'pizza-choice': deliveryPizzaChoice}
+    newOrder = {'name': deliveryName, 'address': deliveryAddress, 'billing-address': deliveryBillingAddress, 'zip-code': deliveryZipCode, 'time': deliveryTime, 'pizza-choice': deliveryPizzaChoice, 'status': status}
     orders.append(newOrder)
 
     saveData_JSON(orders)
+    return redirect ('/delivery')
 
 @app.route('/take-out')
 def show_takeoutPage():
@@ -62,45 +66,50 @@ def show_takeoutPage():
 
 @app.route('/take-out', methods = ['POST'])
 def get_take_out_form_values():
-    takeOutName = request.form.get["name"]
-    takeOutBillingAddress = request.form.get["billing-address"]
-    takeOutTime = request.form.get["take-out-time"]
-    takeOutPizzaChoice = request.form.get["pizza-choice"]
+    takeOutName = request.form["name"]
+    takeOutBillingAddress = request.form["billing-address"]
+    takeOutTime = request.form["take-out-time"]
+    takeOutPizzaChoice = request.form["pizza-choice"]
+    status = "Take-Out"
 
     orders = load_data_from_json()
     
-    newOrder = {'name': takeOutName, 'address': '', 'billing-address': takeOutBillingAddress, 'zip-code': '', 'time': takeOutTime, 'pizza-choice': takeOutPizzaChoice}
+    newOrder = {'name': takeOutName, 'address': "", 'billing-address': takeOutBillingAddress, 'zip-code': "", 'time': takeOutTime, 'pizza-choice': takeOutPizzaChoice, 'status': status}
     orders.append(newOrder)
 
     saveData_JSON(orders)
+    return redirect ('/take-out')
 
-@app.route('/home')
+@app.route('/')
 def show_home():
     return render_template("home.html")
 
+@app.route('/menu')
+def show_menu():
+    return render_template("menu.html")
 
-@app.route('/oven')
-def index():
-    return render_template("oven.html")
+# @app.route('/oven')
+# def index():
+#     return render_template("oven.html")
 
-@app.route('/toggle_led', methods=['POST'])
-def toggle_led():
-    try:
-        # Receive the LED command from the request
-        data = request.get_json()
-        led_command = data.get("led_command")
+# @app.route('/toggle_led', methods=['POST'])
+# def toggle_led():
+#     try:
+#         # Receive the LED command from the request
+#         data = request.get_json()
+#         led_command = data.get("led_command")
         
-        # Ensure the serial port is open
-        if not ser.is_open:
-            ser.open()
+#         # Ensure the serial port is open
+#         if not ser.is_open:
+#             ser.open()
 
-        # Send the command to the Arduino
-        ser.write(led_command.encode())
+#         # Send the command to the Arduino
+#         ser.write(led_command.encode())
 
-        return jsonify({"message": f"{led_command} sent"}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+#         return jsonify({"message": f"{led_command} sent"}), 200
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

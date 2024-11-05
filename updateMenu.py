@@ -2,11 +2,7 @@ from flask import Flask, render_template, request, redirect, Blueprint, flash
 import os
 import json
 
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'  
-
-
-newFood_Blueprint = Blueprint('newfood', __name__, url_prefix='/newfood')
+newFood_Blueprint = Blueprint('newfood', __name__)
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -33,12 +29,12 @@ def load_data_from_json():
     return []
 
 
-@app.route('/')
+@newFood_Blueprint.route('/mario')
 def show_newfood():
     return render_template('mario.html') 
 
 
-@app.route('/submit', methods=['POST'])
+@newFood_Blueprint.route('/submit', methods=['POST'])
 def add_new_pizza():
     pizza_name = request.form.get('pizzaName')
     description = request.form.get('description')
@@ -63,14 +59,28 @@ def add_new_pizza():
             {"size": "large", "price": float(large_price)}
         ],
         "vegetarian": vegetarian,
-        "calories": int(calories)
+        "calories": int(calories),
+        "available_toppings": [
+            {"topping": "Pepperoni ", "price": 1.5},
+            {"topping": "Mushrooms", "price": 1.0},
+            {"topping": "Onions", "price": 1.2},
+            {"topping": "Bacon", "price": 1.2},
+            {"topping": "Extra Cheese", "price": 1.2},
+            {"topping": "Black Olives", "price": 1.2},
+            {"topping": "Green Peppers", "price": 1.2},
+            {"topping": "Pineapple", "price": 1.2},
+            {"topping": "Spinach", "price": 1.2},
+            {"topping": "Anchovies", "price": 1.2},
+            {"topping": "Garlic", "price": 1.2},
+            {"topping": "Tomatoes", "price": 1.2},
+            {"topping": "Artichokes", "price": 1.2},
+            {"topping": "Basil", "price": 1.2
+            }
+        ]
     }
 
     save_data_json(pizza_data)
     flash('Pizza added successfully!')
     return redirect('/newfood')
 
-app.register_blueprint(newFood_Blueprint)
 
-if __name__ == '__main__':
-    app.run(debug=True)
