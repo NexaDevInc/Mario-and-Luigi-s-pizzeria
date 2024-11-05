@@ -13,12 +13,18 @@
 }
 
 body {
+    height: auto;
     color: black;
-    background-color: var(--color2);
+    background-image: url("/static/img/Pizza-img.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;    /* Allow image to scroll with content */
+    overflow-x: hidden;
 }
+
 #container {
     width: 100vw;
-    height: 100vh;
+    height: 15vw;
     margin: 0 auto;
 }
 
@@ -32,7 +38,7 @@ body {
     align-items: center;
     padding: 0 25vw;
     height: 125px;
-    background-color: #3e4710;
+    background-color: var(--color2);
     z-index: 10;
 }
 
@@ -66,6 +72,25 @@ button {
     transition: all 125ms ease-in-out;
     color: var(--color1);
 }
+#back-button {
+    position: fixed;
+    top: 10px; /* Adjust spacing as needed */
+    left: 10px; /* Adjust spacing as needed */
+    padding: 12.5px;
+    margin: 30px;
+    border-radius: 12.5px;
+    border: 2px solid var(--color1);
+    cursor: pointer;
+    color: var(--color1);
+    background-color: var(--color2);
+    z-index: 20; /* Make sure it's above other elements */
+    transition: all 125ms ease-in-out;
+}
+
+#back-button:hover {
+    background-color: var(--color3);
+}
+
 button:hover {
     background-color: var(--color3);
 }
@@ -78,12 +103,20 @@ button:hover {
 #signup-button:hover, #checkout-button:hover {
     border: 2px solid var(--color1);
 }
+#content {
+    padding: 4px;
+    display: flex;
+}
+
+#sidebar {
+    width: 150px;
+}
 
 /* Article styling */
 article {
     max-width: 750px;
     margin: 30px auto;
-    margin-top: 90px;
+    margin-top: -70px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
