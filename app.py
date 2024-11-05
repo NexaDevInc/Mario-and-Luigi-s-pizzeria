@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-from flask import Flask, render_template, request
-import os
-import json
-=======
 from flask import Flask, render_template, request, jsonify
->>>>>>> e93d6b904266da506c0a3210f6a13840c244bfa7
 from Menu import Menu_Blueprint
 from LoginRegister import LoginRegister_Blueprint
 import serial
+import os
+import json
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
