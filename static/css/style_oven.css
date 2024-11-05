@@ -13,13 +13,13 @@ h1 {
     opacity: 0.8;
 }
 
-/* Grid container for 2x2 layout */
+
 .grid_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
     width: 80%;
-    margin: 0 auto; /* Center the grid */
+    margin: 0 auto;
 }
 
 .grid_item {
@@ -33,7 +33,7 @@ h1 {
     background-color: #333;
 }
 
-/* Styling for start, stop, and reset buttons */
+
 .start, .stop, .reset {
     font-family: "Times New Roman";
     font-size: 18px;
@@ -43,7 +43,7 @@ h1 {
     cursor: pointer;
     padding: 8px 16px;
     margin: 5px 0;
-    width: 80%; /* Ensures button alignment */
+    width: 80%; 
 }
 
 .start {
@@ -58,14 +58,12 @@ h1 {
     background-color: blue;
 }
 
-/* Styling for the image */
 .grid_item img {
     width: 50%;
     height: auto;
     margin-bottom: 10px;
 }
 
-/* Styling for the timer display */
 span {
     font-family: "Times New Roman";
     font-size: 24px;
