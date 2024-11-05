@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from Menu import Menu_Blueprint
 from LoginRegister import LoginRegister_Blueprint
 import serial
-import jsonify
 app = Flask(__name__)
 
 
@@ -35,7 +34,7 @@ def show_home():
 
 ser = serial.Serial("COM4", baudrate=9600, timeout=1)
 
-@app.route('/')
+@app.route('/oven')
 def index():
     return render_template("oven.html")
 
