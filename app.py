@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, redirect, flash
-from Menu import Menu_Blueprint
+
 from LoginRegister import LoginRegister_Blueprint
+from updateMenu import newFood_Blueprint
 import serial
 import os
 import json
@@ -34,8 +35,8 @@ def load_data_from_json():
 
 app.secret_key = "TopSecretKey"
 
-app.register_blueprint(Menu_Blueprint)
 app.register_blueprint(LoginRegister_Blueprint)
+app.register_blueprint(newFood_Blueprint)
 
 @app.route('/delivery')
 def show_deliveryPage():
@@ -79,10 +80,13 @@ def get_and_save_take_out_form_values():
     saveData_JSON(orders)
     return redirect ('/take-out')
 
-@app.route('/home')
+@app.route('/')
 def show_home():
     return render_template("home.html")
 
+@app.route('/menu')
+def show_menu():
+    return render_template("menu.html")
 
 # @app.route('/oven')
 # def index():
@@ -108,4 +112,4 @@ def show_home():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

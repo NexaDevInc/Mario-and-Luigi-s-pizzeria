@@ -32,7 +32,6 @@ body {
     background-color: var(--color2);
 }
 
-
 .sidebar {
     width: 200px;
     padding: var(--margin);
@@ -47,9 +46,17 @@ body {
 .sidebar p {
     font-size: var(--paragraph);
     font-weight: var(--semiBold);
-    margin-top: 10%
+    margin-top: 100px; 
 }
 
+
+.sidebar p:first-of-type {
+    margin-top: 120px; 
+}
+
+.sidebar p:last-of-type {
+    margin-top: 10px; 
+}
 
 .global-grid { 
     padding: var(--margin);
@@ -60,7 +67,6 @@ body {
     color: var(--color1);
     margin-bottom: 10px;
     font-weight: var(--semiBold);
-    
 }
 
 .global-element {
@@ -80,7 +86,7 @@ body {
     background-color: var(--color1);
     padding: var(--margin);
     border-radius: var(--padding-borderRadius-input);
-    width: calc(25% - 10px); 
+    width: calc(25% - 50px); 
 }
 
 .element h3 {
@@ -98,7 +104,13 @@ body {
 }
 
 
-.element button {
+.button-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.button-container button {
     padding: 10px;
     background-color: var(--color3);
     color: var(--color1);
@@ -106,7 +118,6 @@ body {
     border-radius: var(--padding-borderRadius-button);
     cursor: pointer;
     font-weight: var(--bold);
-
 }
 
 .line {
@@ -114,6 +125,7 @@ body {
     height: 600px; 
     margin: 20px; 
     margin-left: 10vw; 
+    margin-top: 100px; 
 }
 
 .line::before {
@@ -137,24 +149,6 @@ body {
     height: 80px; 
 }
 
-.sidebar {
-    width: 200px;
-    padding: var(--margin);
-    color: var(--color1);
-    position: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-left: 15px;
-}
-
-.sidebar p {
-    font-size: var(--paragraph);
-    font-weight: var(--semiBold);
-    margin-top: 10%;
-}
-
 .admin {
     font-size: var(--paragraph);
     font-weight: var(--semiBold);
@@ -173,8 +167,40 @@ body {
 
 .account span {
     font-weight: var(--bold);
+    font-size: 20px;
 }
 
 .account i {
     margin-left: 5px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    width: 90%;
+}
+
+.grid_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--color2);
+}
+
+.grid_item img {
+    width: 60%; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 30px;
+    color: var(--color1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
