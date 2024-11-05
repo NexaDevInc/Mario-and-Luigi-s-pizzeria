@@ -1,0 +1,64 @@
+:root {
+    --color1: #F0EFF4;
+    --color2: #58641D;
+    --color3: #A22522;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    margin-top: 25px;
+}
+
+input {
+    all: unset;
+    width: 250px;
+    padding: 6.25px;
+    border-radius: 6.25px;
+    color: var(--color2);
+    background-color: var(--color1);
+}
+
+a {
+    all: unset;
+    margin-top: 25px;
+    text-decoration: underline;
+    color: var(--color1);
+    cursor: pointer;
+}
+
+button {
+    all: unset;
+    width: 100px;
+    margin-top: 25px;
+    padding: 12.5px;
+    border-radius: 12.5px;
+    text-align: center;
+    color: var(--color1);
+    background-color: var(--color3);
+    cursor: pointer;
+}

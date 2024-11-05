@@ -8,8 +8,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../static/css/styles delivery.css">
+        <link rel="stylesheet" href="../static/css/styles_delivery.css">
         <link rel="icon" href="../static/img/logo.png">
+        <script src="blhElements/blhElements.js"></script>
     </head>
     <body>
         <div id="container">
@@ -21,12 +22,86 @@
                     </h1>
                 </div>
                 <div id="header-right">
-                    <button type="button" onclick="window.location.href = '#Login'">
+                    <button type="button" onclick="window.location.href = '/Login'">
                         Login
                     </button>
-                    <button type="button" id="signup-button" onclick="window.location.href = '#Signup'">
+                    <button type="button" id="signup-button" onclick="window.location.href = '/register'">
                         Signup
                     </button>
+                </div>
+            </div>
+            <div id="pizza-editting-modal-aligner">
+                <div id="pizza-editting-modal">
+                    <h2>
+                        Edit {pizza choice}
+                    </h2>
+                    <form action="#" id="pizza-editting-form">
+                        <div id="ingredients-group">
+                            <div class="ingredient" id="ingredient-1">
+                                <p>
+                                    {Ingredient Name}
+                                </p>
+                                <blh-counter
+                                    blh-counter-input-placeholder="1"
+                                    blh-counter-input-minimum="0"
+                                    blh-counter-input-maximum="10"
+                                    blh-counter-input-step="1"
+                                    blh-counter-color="#58641D"
+                                    blh-counter-active-color="#F0EFF4"
+                                    blh-counter-background-color="transparent"
+                                    blh-counter-active-background-color="#58641D"
+                                ></blh-counter>
+                            </div>
+                            <div class="ingredient" id="ingredient-2">
+                                <p>
+                                    {Ingredient Name}
+                                </p>
+                                <blh-counter
+                                    blh-counter-input-placeholder="1"
+                                    blh-counter-input-minimum="0"
+                                    blh-counter-input-maximum="10"
+                                    blh-counter-input-step="1"
+                                    blh-counter-color="#58641D"
+                                    blh-counter-active-color="#F0EFF4"
+                                    blh-counter-background-color="transparent"
+                                    blh-counter-active-background-color="#58641D"
+                                ></blh-counter>
+                            </div>
+                            <div class="ingredient" id="ingredient-3">
+                                <p>
+                                    {Ingredient Name}
+                                </p>
+                                <blh-counter
+                                    blh-counter-input-placeholder="1"
+                                    blh-counter-input-minimum="0"
+                                    blh-counter-input-maximum="10"
+                                    blh-counter-input-step="1"
+                                    blh-counter-color="#58641D"
+                                    blh-counter-active-color="#F0EFF4"
+                                    blh-counter-background-color="transparent"
+                                    blh-counter-active-background-color="#58641D"
+                                ></blh-counter>
+                            </div>
+                            <div class="ingredient" id="ingredient-4">
+                                <p>
+                                    {Ingredient Name}
+                                </p>
+                                <blh-counter
+                                    blh-counter-input-placeholder="1"
+                                    blh-counter-input-minimum="0"
+                                    blh-counter-input-maximum="10"
+                                    blh-counter-input-step="1"
+                                    blh-counter-color="#58641D"
+                                    blh-counter-active-color="#F0EFF4"
+                                    blh-counter-background-color="transparent"
+                                    blh-counter-active-background-color="#58641D"
+                                ></blh-counter>
+                            </div>
+                        </div>
+                        <button onclick="closeModal()" id="save-button">
+                            Save Changes
+                        </button>
+                    </form>
                 </div>
             </div>
             <div id="content">
@@ -37,7 +112,7 @@
                     </button>
                 </div>
                 <div id="main-content">
-                    <form action="#">
+                    <form action="#" id="delivery-form">
                         <div id="name-input">
                             <Label for="name">
                                 <h3>
@@ -69,15 +144,16 @@
                                 </h3>
                             </Label>
                             <div id="pizza-choice-group">
-                                <i class="fa-solid fa-pencil"></i>
+                                <i class="fa-solid fa-pencil" onclick="openModal()"></i>
                                 <select id="pizza-choice" name="pizza-choice">
-                                    <option value="1">{1}</option>
-                                    <option value="2">{2}</option>
-                                    <option value="3">{3}</option>
-                                    <option value="4">{4}</option>
+                                    <option value="1">{pizza choice}</option>
+                                    <option value="2">{pizza choice}</option>
+                                    <option value="3">{pizza choice}</option>
+                                    <option value="4">{pizza choice}</option>
                                 </select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
+                            <div id="pizza-edits"></div>
                         </div>
                         <div id="add-more-input">
                             <button type="button" onclick="window.location.href = '#Add More'">
@@ -85,14 +161,12 @@
                                 Add more
                             </button>
                         </div>
-                        <div id="address-same-input">
-                            <div id="checkbox">
-                                <i id="address-same-checkbox-icon" class="fa-solid fa-check"></i>
-                            </div>
-                            Billing address same as delivery address?
+                        <div id="address-same-input" role="checkbox" aria-checked="false">
+                            <input type="checkbox" id="checkbox">
+                            <label for="address-same-checkbox">Billing address same as delivery address?</label>
                         </div>
                         <div id="billing-address-input">
-                            <Label for="billing-address">
+                            <Label for="billing-address" id="billing-address-label">
                                 <h3>
                                     Billing Address:
                                 </h3>
@@ -106,12 +180,7 @@
                                 </h3>
                             </Label>
                             <div id="delivery-time-group">
-                                <select id="delivery-time" name="delivery-time">
-                                    <option value="1">{1}</option>
-                                    <option value="2">{2}</option>
-                                    <option value="3">{3}</option>
-                                    <option value="4">{4}</option>
-                                </select>
+                                <select id="delivery-time" name="delivery-time"></select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
@@ -130,6 +199,7 @@
                 </div>
             </div>
         </div>
-        <script src="../static/js/functions delivery.js"></script>
+        <script src="../static/js/functions_shared.js"></script>
+        <script src="../static/js/functions_delivery.js"></script>
     </body>
 </html>
