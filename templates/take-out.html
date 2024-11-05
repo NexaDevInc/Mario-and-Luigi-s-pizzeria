@@ -112,7 +112,7 @@
                     </button>
                 </div>
                 <div id="main-content">
-                    <form action="#" id="take-out-form">
+                    <form action="/take-out" id="take-out-form" method="post">
                         <div id="name-input">
                             <Label for="name">
                                 <h3>
@@ -137,6 +137,7 @@
                                 </select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
+                            <div id="pizza-edits"></div>
                         </div>
                         <div id="add-more-input">
                             <button type="button" onclick="window.location.href = '#Add More'">
@@ -159,12 +160,7 @@
                                 </h3>
                             </Label>
                             <div id="take-out-time-group">
-                                <select id="take-out-time" name="take-out-time">
-                                    <option value="1">{take-out time choice}</option>
-                                    <option value="2">{take-out time choice}</option>
-                                    <option value="3">{take-out time choice}</option>
-                                    <option value="4">{take-out time choice}</option>
-                                </select>
+                                <select id="take-out-time" name="take-out-time"></select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
@@ -183,6 +179,7 @@
                 </div>
             </div>
         </div>
+        <script src="../static/js/functions_shared.js"></script>
         <script src="../static/js/functions_take-out.js"></script>
     </body>
 </html>

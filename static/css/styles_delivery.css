@@ -162,7 +162,7 @@ button:hover {
     justify-content: space-between;
 }
 
-input {
+input:not([type='checkbox']) {
     all: unset;
     padding: 6.25px;
     border-radius: 6.25px;
@@ -191,10 +191,7 @@ select {
     height: 31.5px;
     aspect-ratio: 1;
     border-radius: 6.25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--color1);
+    accent-color: var(--color3);
 }
 
 #pizza-editting-modal-aligner {
