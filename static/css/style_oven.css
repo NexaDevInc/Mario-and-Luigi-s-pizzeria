@@ -1,0 +1,77 @@
+body {
+    background-color: darkgreen;
+}
+
+h1 {
+    font-family: "Times New Roman";
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+/* Grid container for 2x2 layout */
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between grid items */
+    width: 80%;
+    margin: 0 auto; /* Center the grid */
+}
+
+.grid_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+/* Styling for start, stop, and reset buttons */
+.start, .stop, .reset {
+    font-family: "Times New Roman";
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 5px 0;
+    width: 80%; /* Ensures button alignment */
+}
+
+.start {
+    background-color: lightgreen;
+}
+
+.stop {
+    background-color: red;
+}
+
+.reset {
+    background-color: blue;
+}
+
+/* Styling for the image */
+.grid_item img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Styling for the timer display */
+span {
+    font-family: "Times New Roman";
+    font-size: 24px;
+    background-color: yellow;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
