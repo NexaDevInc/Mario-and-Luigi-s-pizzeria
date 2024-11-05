@@ -12,12 +12,13 @@ peopleInSys = []
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, 'data')
+DATA_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(DATA_DIR, 'data')
 
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-json_file_path = os.path.join(DATA_DIR, 'profiles.json')
+json_file_path = os.path.join(STATIC_DIR, 'profiles.json')
 
 def saveData_JSON(profiles):
     with open(json_file_path, 'w') as json_file:

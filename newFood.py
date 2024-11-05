@@ -29,8 +29,6 @@ def load_data_from_json():
 
 
 
-
-
 @newFood_Blueprint.route('/newfood')
 def show_newfood():
     return render_template('newFood.html')

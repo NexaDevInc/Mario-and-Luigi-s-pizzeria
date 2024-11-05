@@ -1,693 +1,1189 @@
 [
-  {
-    "pizza_id": "1",
-    "name": "Margherita",
-    "description": "Classic Margherita pizza with fresh mozzarella, tomato sauce, and basil leaves.",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Basil",
-      "Olive Oil"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 5.99
-      },
-      {
-        "size": "medium",
-        "price": 7.99
-      },
-      {
-        "size": "large",
-        "price": 9.99
-      }
-    ],
-    "vegetarian": true,
-    "calories": 250,
-    "image_url": "https://example.com/images/margherita.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "2",
-    "name": "Pepperoni",
-    "description": "Traditional pizza topped with spicy pepperoni and melted cheese.",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Pepperoni"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 6.99
-      },
-      {
-        "size": "medium",
-        "price": 8.99
-      },
-      {
-        "size": "large",
-        "price": 10.99
-      }
-    ],
-    "vegetarian": false,
-    "calories": 300,
-    "image_url": "https://example.com/images/pepperoni.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "3",
-    "name": "BBQ Chicken",
-    "description": "Delicious BBQ sauce pizza topped with grilled chicken and red onions.",
-    "ingredients": [
-      "BBQ Sauce",
-      "Mozzarella Cheese",
-      "Grilled Chicken",
-      "Red Onions"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 7.99
-      },
-      {
-        "size": "medium",
-        "price": 9.99
-      },
-      {
-        "size": "large",
-        "price": 11.99
-      }
-    ],
-    "vegetarian": false,
-    "calories": 320,
-    "image_url": "https://example.com/images/bbq_chicken.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "4",
-    "name": "Veggie Deluxe",
-    "description": "Loaded with fresh vegetables for a flavorful vegetarian experience.",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Bell Peppers",
-      "Olives",
-      "Onions",
-      "Mushrooms"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 6.49
-      },
-      {
-        "size": "medium",
-        "price": 8.49
-      },
-      {
-        "size": "large",
-        "price": 10.49
-      }
-    ],
-    "vegetarian": true,
-    "calories": 220,
-    "image_url": "https://example.com/images/veggie_deluxe.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "5",
-    "name": "Hawaiian",
-    "description": "Sweet and savory combination with ham and pineapple.",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Ham",
-      "Pineapple"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 6.99
-      },
-      {
-        "size": "medium",
-        "price": 8.99
-      },
-      {
-        "size": "large",
-        "price": 10.99
-      }
-    ],
-    "vegetarian": false,
-    "calories": 280,
-    "image_url": "https://example.com/images/hawaiian.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "6",
-    "name": "Four Cheese",
-    "description": "A cheese lover's delight with four types of cheese.",
-    "ingredients": [
-      "Mozzarella",
-      "Parmesan",
-      "Cheddar",
-      "Gorgonzola"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 7.49
-      },
-      {
-        "size": "medium",
-        "price": 9.49
-      },
-      {
-        "size": "large",
-        "price": 11.49
-      }
-    ],
-    "vegetarian": true,
-    "calories": 350,
-    "image_url": "https://example.com/images/four_cheese.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "7",
-    "name": "Meat Lovers",
-    "description": "A hearty pizza with all the favorite meats.",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Pepperoni",
-      "Sausage",
-      "Bacon",
-      "Ham"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 8.99
-      },
-      {
-        "size": "medium",
-        "price": 10.99
-      },
-      {
-        "size": "large",
-        "price": 12.99
-      }
-    ],
-    "vegetarian": false,
-    "calories": 400,
-    "image_url": "https://example.com/images/meat_lovers.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  },
-  {
-    "pizza_id": "8",
-    "name": "Spicy Italian",
-    "description": "Hot and spicy pizza with Italian sausage and chili peppers.",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Italian Sausage",
-      "Chili Peppers"
-    ],
-    "size_options": [
-      {
-        "size": "small",
-        "price": 6.99
-      },
-      {
-        "size": "medium",
-        "price": 8.99
-      },
-      {
-        "size": "large",
-        "price": 10.99
-      }
-    ],
-    "vegetarian": false,
-    "calories": 320,
-    "image_url": "https://example.com/images/spicy_italian.jpg",
-    "available_toppings": [
-      {
-        "topping": "Pepperoni ",
-        "price": 1.5
-      },
-      {
-        "topping": "Mushrooms",
-        "price": 1.0
-      },
-      {
-        "topping": "Onions",
-        "price": 1.2
-      },
-      {
-        "topping": "Bacon",
-        "price": 1.2
-      },
-      {
-        "topping": "Extra Cheese",
-        "price": 1.2
-      },
-      {
-        "topping": "Black Olives",
-        "price": 1.2
-      },
-      {
-        "topping": "Green Peppers",
-        "price": 1.2
-      },
-      {
-        "topping": "Pineapple",
-        "price": 1.2
-      },
-      {
-        "topping": "Spinach",
-        "price": 1.2
-      },
-      {
-        "topping": "Anchovies",
-        "price": 1.2
-      },
-      {
-        "topping": "Garlic",
-        "price": 1.2
-      },
-      {
-        "topping": "Tomatoes",
-        "price": 1.2
-      },
-      {
-        "topping": "Artichokes",
-        "price": 1.2
-      },
-      {
-        "topping": "Basil",
-        "price": 1.2
-      }
-    ]
-  }
+    {
+        "pizza_id": "1",
+        "name": "Margherita",
+        "description": "Classic Margherita pizza with fresh mozzarella, tomato sauce, and basil leaves.",
+        "ingredients": [
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Basil",
+            "Olive Oil"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 5.99
+            },
+            {
+                "size": "medium",
+                "price": 7.99
+            },
+            {
+                "size": "large",
+                "price": 9.99
+            }
+        ],
+        "vegetarian": true,
+        "calories": 250,
+        "image_url": "https://example.com/images/margherita.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "2",
+        "name": "Pepperoni",
+        "description": "Traditional pizza topped with spicy pepperoni and melted cheese.",
+        "ingredients": [
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 6.99
+            },
+            {
+                "size": "medium",
+                "price": 8.99
+            },
+            {
+                "size": "large",
+                "price": 10.99
+            }
+        ],
+        "vegetarian": false,
+        "calories": 300,
+        "image_url": "https://example.com/images/pepperoni.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "3",
+        "name": "BBQ Chicken",
+        "description": "Delicious BBQ sauce pizza topped with grilled chicken and red onions.",
+        "ingredients": [
+            "BBQ Sauce",
+            "Mozzarella Cheese",
+            "Grilled Chicken",
+            "Red Onions"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 7.99
+            },
+            {
+                "size": "medium",
+                "price": 9.99
+            },
+            {
+                "size": "large",
+                "price": 11.99
+            }
+        ],
+        "vegetarian": false,
+        "calories": 320,
+        "image_url": "https://example.com/images/bbq_chicken.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "4",
+        "name": "Veggie Deluxe",
+        "description": "Loaded with fresh vegetables for a flavorful vegetarian experience.",
+        "ingredients": [
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Bell Peppers",
+            "Olives",
+            "Onions",
+            "Mushrooms"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 6.49
+            },
+            {
+                "size": "medium",
+                "price": 8.49
+            },
+            {
+                "size": "large",
+                "price": 10.49
+            }
+        ],
+        "vegetarian": true,
+        "calories": 220,
+        "image_url": "https://example.com/images/veggie_deluxe.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "5",
+        "name": "Hawaiian",
+        "description": "Sweet and savory combination with ham and pineapple.",
+        "ingredients": [
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Ham",
+            "Pineapple"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 6.99
+            },
+            {
+                "size": "medium",
+                "price": 8.99
+            },
+            {
+                "size": "large",
+                "price": 10.99
+            }
+        ],
+        "vegetarian": false,
+        "calories": 280,
+        "image_url": "https://example.com/images/hawaiian.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "6",
+        "name": "Four Cheese",
+        "description": "A cheese lover's delight with four types of cheese.",
+        "ingredients": [
+            "Mozzarella",
+            "Parmesan",
+            "Cheddar",
+            "Gorgonzola"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 7.49
+            },
+            {
+                "size": "medium",
+                "price": 9.49
+            },
+            {
+                "size": "large",
+                "price": 11.49
+            }
+        ],
+        "vegetarian": true,
+        "calories": 350,
+        "image_url": "https://example.com/images/four_cheese.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "7",
+        "name": "Meat Lovers",
+        "description": "A hearty pizza with all the favorite meats.",
+        "ingredients": [
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Pepperoni",
+            "Sausage",
+            "Bacon",
+            "Ham"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 8.99
+            },
+            {
+                "size": "medium",
+                "price": 10.99
+            },
+            {
+                "size": "large",
+                "price": 12.99
+            }
+        ],
+        "vegetarian": false,
+        "calories": 400,
+        "image_url": "https://example.com/images/meat_lovers.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "8",
+        "name": "Spicy Italian",
+        "description": "Hot and spicy pizza with Italian sausage and chili peppers.",
+        "ingredients": [
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Italian Sausage",
+            "Chili Peppers"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 6.99
+            },
+            {
+                "size": "medium",
+                "price": 8.99
+            },
+            {
+                "size": "large",
+                "price": 10.99
+            }
+        ],
+        "vegetarian": false,
+        "calories": 320,
+        "image_url": "https://example.com/images/spicy_italian.jpg",
+        "available_toppings": [
+            {
+                "topping": "Pepperoni ",
+                "price": 1.5
+            },
+            {
+                "topping": "Mushrooms",
+                "price": 1.0
+            },
+            {
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
+            }
+        ]
+    },
+    {
+        "pizza_id": "9",
+        "name": "123",
+        "description": "123",
+        "ingredients": [
+            "Olives"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 123.0
+            },
+            {
+                "size": "medium",
+                "price": 123.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 123
+    },
+    {
+        "pizza_id": "10",
+        "name": "lol",
+        "description": "fdsfdsd",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 234.0
+            },
+            {
+                "size": "medium",
+                "price": 234.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 234
+    },
+    {
+        "pizza_id": "11",
+        "name": "eww",
+        "description": "wet",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 232.0
+            },
+            {
+                "size": "medium",
+                "price": 21.0
+            },
+            {
+                "size": "large",
+                "price": 23.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 213
+    },
+    {
+        "pizza_id": "12",
+        "name": "vdfss",
+        "description": "fdsfsd",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 213.0
+            },
+            {
+                "size": "medium",
+                "price": 321.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 321
+    },
+    {
+        "pizza_id": "13",
+        "name": "hgvc",
+        "description": "hjk",
+        "ingredients": [
+            "Pepperoni",
+            "Olives"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 765.0
+            },
+            {
+                "size": "medium",
+                "price": 34.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 234
+    },
+    {
+        "pizza_id": "14",
+        "name": "awed",
+        "description": "dasad",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 32.0
+            },
+            {
+                "size": "medium",
+                "price": 423.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 234
+    },
+    {
+        "pizza_id": "15",
+        "name": "pdf",
+        "description": "sad",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 321.0
+            },
+            {
+                "size": "medium",
+                "price": 123.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 132
+    },
+    {
+        "pizza_id": "16",
+        "name": "eww",
+        "description": "awe",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 321.0
+            },
+            {
+                "size": "medium",
+                "price": 132.0
+            },
+            {
+                "size": "large",
+                "price": 132.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 132
+    },
+    {
+        "pizza_id": "17",
+        "name": "Feds",
+        "description": "erase",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 423.0
+            },
+            {
+                "size": "medium",
+                "price": 234.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 423
+    },
+    {
+        "pizza_id": "18",
+        "name": "sdsdf",
+        "description": "dfsfsd",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 23.0
+            },
+            {
+                "size": "medium",
+                "price": 123.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 123
+    },
+    {
+        "pizza_id": "19",
+        "name": "ererwr",
+        "description": "werwe",
+        "ingredients": [
+            "Cheese"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 123.0
+            },
+            {
+                "size": "medium",
+                "price": 123.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 123
+    },
+    {
+        "pizza_id": "20",
+        "name": "erfef",
+        "description": "rear",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 342.0
+            },
+            {
+                "size": "medium",
+                "price": 243.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 243
+    },
+    {
+        "pizza_id": "21",
+        "name": "ertgtr",
+        "description": "erter",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 324.0
+            },
+            {
+                "size": "medium",
+                "price": 234.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 234
+    },
+    {
+        "pizza_id": "22",
+        "name": "ertgtr",
+        "description": "erter",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 324.0
+            },
+            {
+                "size": "medium",
+                "price": 234.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 234
+    },
+    {
+        "pizza_id": "23",
+        "name": "erfref",
+        "description": "erte",
+        "ingredients": [
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 324.0
+            },
+            {
+                "size": "medium",
+                "price": 234.0
+            },
+            {
+                "size": "large",
+                "price": 234.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 342
+    },
+    {
+        "pizza_id": "24",
+        "name": "we're",
+        "description": "ewww",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 232.0
+            },
+            {
+                "size": "medium",
+                "price": 321.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 123
+    },
+    {
+        "pizza_id": "25",
+        "name": "qweqw",
+        "description": "we're",
+        "ingredients": [
+            "Cheese"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 213.0
+            },
+            {
+                "size": "medium",
+                "price": 231.0
+            },
+            {
+                "size": "large",
+                "price": 123.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 123
+    },
+    {
+        "pizza_id": "26",
+        "name": "awe",
+        "description": "ear",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 23.0
+            },
+            {
+                "size": "medium",
+                "price": 132.0
+            },
+            {
+                "size": "large",
+                "price": 312.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 132
+    },
+    {
+        "pizza_id": "27",
+        "name": "wearer",
+        "description": "erter",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 123.0
+            },
+            {
+                "size": "medium",
+                "price": 321.0
+            },
+            {
+                "size": "large",
+                "price": 132.0
+            }
+        ],
+        "vegetarian": false,
+        "calories": 123
+    },
+    {
+        "pizza_id": "28",
+        "name": "ewer",
+        "description": "were",
+        "ingredients": [
+            "Cheese",
+            "Pepperoni"
+        ],
+        "size_options": [
+            {
+                "size": "small",
+                "price": 324.0
+            },
+            {
+                "size": "medium",
+                "price": 234.0
+            },
+            {
+                "size": "large",
+                "price": 423.0
+            }
+        ],
+        "vegetarian": true,
+        "calories": 234
+    }
 ]

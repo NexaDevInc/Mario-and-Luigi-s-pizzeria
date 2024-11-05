@@ -27,8 +27,8 @@ function generateTimeSlots(openingTime, closingTime) {
 
     return slots;
 }
-const openingTime = "11:00";
-const closingTime = "21:00";
+const openingTime = "14:00";
+const closingTime = "22:00";
 const timeSlots = generateTimeSlots(openingTime, closingTime);
 
 timeSlots.forEach(slot => {
