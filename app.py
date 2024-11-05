@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from Menu import Menu_Blueprint
 from LoginRegister import LoginRegister_Blueprint
+import serial
+import jsonify
 app = Flask(__name__)
 
 
@@ -30,6 +32,31 @@ def show_takeoutPage():
 @app.route('/home')
 def show_home():
     return render_template("home.html")
+
+ser = serial.Serial("COM4", baudrate=9600, timeout=1)
+
+@app.route('/')
+def index():
+    return render_template("oven.html")
+
+@app.route('/toggle_led', methods=['POST'])
+def toggle_led():
+    try:
+        # Receive the LED command from the request
+        data = request.get_json()
+        led_command = data.get("led_command")
+        
+        # Ensure the serial port is open
+        if not ser.is_open:
+            ser.open()
+
+        # Send the command to the Arduino
+        ser.write(led_command.encode())
+
+        return jsonify({"message": f"{led_command} sent"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)
