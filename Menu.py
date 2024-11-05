@@ -5,7 +5,7 @@ import json
 
 Menu_Blueprint = Blueprint('MenuBluepirnt', __name__)
 
-
+""" 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
@@ -27,7 +27,7 @@ def load_data_from_json():
                 fromJson = json.loads(content)
                 return fromJson
             return []
-
-@Menu_Blueprint.route('/Menu')
+ """
+@Menu_Blueprint.route('/menu')
 def show_menu():
     return render_template("menu.html")
