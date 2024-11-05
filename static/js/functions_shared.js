@@ -35,9 +35,10 @@ fetch('../static/data/Ingridients.json')
     .then(response => response.json())
     .then(data => {
         const ingredientGroup = document.getElementById('ingredients-group');
-        data.forEach(ingredient => {
+        data.forEach((ingredient, index) => {
             const ingredientRow = document.createElement('div');
             ingredientRow.className = 'ingredient';
+            ingredientRow.id = index;
             ingredientGroup.appendChild(ingredientRow);
 
             const ingredientLabel = document.createElement('p');
@@ -45,7 +46,7 @@ fetch('../static/data/Ingridients.json')
             ingredientRow.appendChild(ingredientLabel);
 
             const ingredientCounter = document.createElement('blh-counter');
-            ingredientCounter.setAttribute('blh-counter-input-placeholder', "1");
+            ingredientCounter.setAttribute('blh-counter-input-placeholder', "0");
             ingredientCounter.setAttribute('blh-counter-input-minimum', "0");
             ingredientCounter.setAttribute('blh-counter-input-maximum', "10");
             ingredientCounter.setAttribute('blh-counter-input-step', "1");
@@ -57,7 +58,7 @@ fetch('../static/data/Ingridients.json')
         });
     });
 
-    fetch('../static/data/Menu.json')
+fetch('../static/data/Menu.json')
     .then(response => response.json())
     .then(data => {
         const pizzaChoice = document.getElementById('pizza-choice');

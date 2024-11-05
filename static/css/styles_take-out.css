@@ -110,12 +110,7 @@ button:hover {
     grid-area: pizza-choice;
     display: flex;
     flex-direction: column;
-}
-
-#add-more-input {
-    grid-area: add-more;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 25px;
 }
 
 #billing-address-input {
