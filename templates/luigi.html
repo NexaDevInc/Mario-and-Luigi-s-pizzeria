@@ -21,52 +21,79 @@
         <div class="sidebar">
             <p>Pizza Making</p>
             <p>-Orders</p>
-        <div class="line">
-        </div>
+            <div class="line"></div>
         </div>
         <div class="global-element">
-            <h2>New</h2>
-            <div class="grid">
-                <div class="element">
-                    <h3>{Pizza name}</h3>
-                    <p>Pizza name: {Pizza Name}</p>
-                    <p>Order time: {Order Time}</p>
-                    <p>Customer: {Customer Name}, {Customer Address}</p>
-                    <button>Start</button>
+            <div class="grid_container">
+                <div class="grid_item">
+                    <img src="../static/img/oven.png" alt="oven1">
+                    <span id="redTimer">15:00</span>
                 </div>
-                <div class="element">
-                    <h3>{Pizza name}</h3>
-                    <p>Pizza name: {Pizza Name}</p>
-                    <p>Order time: {Order Time}</p>
-                    <p>Customer: {Customer Name}, {Customer Address}</p>
-                    <button>Start</button>
+                
+                <div class="grid_item">
+                    <img src="../static/img/oven.png" alt="oven2">
+                    <span id="greenTimer">15:00</span>
                 </div>
-            </div>
 
-            <h2>In Progress</h2>
+                <div class="grid_item">
+                    <img src="../static/img/oven.png" alt="oven3">
+                    <span id="blueTimer">15:00</span>
+                </div>
+                
+                <div class="grid_item">
+                    <img src="../static/img/oven.png" alt="oven4">
+                    <span id="yellowTimer">15:00</span>
+                </div>
+            </div>
+            <h2>Ovens</h2>
             <div class="grid">
                 <div class="element">
                     <h3>{Pizza name}</h3>
                     <p>Pizza name: {Pizza Name}</p>
                     <p>Order time: {Order Time}</p>
                     <p>Customer: {Customer Name}, {Customer Address}</p>
-                    <button>Finish</button>
+                    <div class="button-container">
+                        <button id="redButtonStart" onclick="toggleLED('RedLedOn')">Oven 1 start</button>
+                        <button id="redButtonStop" onclick="toggleLED('RedLedOff')">Oven 1 stop</button>
+                        <button id="redButtonReset">Reset oven 1 timer</button>
+                    </div>
                 </div>
-            </div>
-
-            <h2>Ready</h2>
-            <div class="grid">
                 <div class="element">
                     <h3>{Pizza name}</h3>
                     <p>Pizza name: {Pizza Name}</p>
                     <p>Order time: {Order Time}</p>
                     <p>Customer: {Customer Name}, {Customer Address}</p>
-                    <button>Delete</button>
+                    <div class="button-container">
+                        <button id="greenButtonStart" onclick="toggleLED('GreenLedOn')">Oven 2 start</button>
+                        <button id="greenButtonStop" onclick="toggleLED('GreenLedOff')">Oven 2 stop</button>
+                        <button id="greenButtonReset">Reset oven 2 timer</button>
+                    </div>
                 </div>
-            </div>
+                <div class="element">
+                    <h3>{Pizza name}</h3>
+                    <p>Pizza name: {Pizza Name}</p>
+                    <p>Order time: {Order Time}</p>
+                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <div class="button-container">
+                        <button id="blueButtonStart" onclick="toggleLED('BlueLedOn')">Oven 3 start</button>
+                        <button id="blueButtonStop" onclick="toggleLED('BlueLedOff')">Oven 3 stop</button>
+                        <button id="blueButtonReset">Reset oven 3 timer</button>
+                    </div>
+                </div>
+                <div class="element">
+                    <h3>{Pizza name}</h3>
+                    <p>Pizza name: {Pizza Name}</p>
+                    <p>Order time: {Order Time}</p>
+                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <div class="button-container">
+                        <button id="yellowButtonStart" onclick="toggleLED('YellowLedOn')">Oven 4 start</button>
+                        <button id="yellowButtonStop" onclick="toggleLED('YellowLedOff')">Oven 4 stop</button>
+                        <button id="yellowButtonReset">Reset oven 4 timer</button>
+                    </div>
+                </div>
+            </div> 
         </div>
     </div>
-
-    <script src="../static/js/functions luigi.js"></script>
+    <script src="../static/js/script_oven.js"></script>
 </body>
 </html>
