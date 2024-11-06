@@ -16,7 +16,7 @@ Status = ""
    
     
 
-""" ser = serial.Serial("COM4", baudrate=9600, timeout=1) """
+ser = serial.Serial("COM4", baudrate=9600, timeout=1)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'static')
@@ -51,7 +51,7 @@ def show_deliveryPage():
     return render_template("delivery.html")
 
 @app.route('/delivery', methods = ['POST'])
-def get_delivery_form_values():
+def get_and_save_delivery_form_values():
     deliveryName = request.form["name"]
     deliveryAddress = request.form["address"]
     deliveryBillingAddress = request.form["billing-address"]
@@ -75,7 +75,7 @@ def show_takeoutPage():
     return render_template("take-out.html")
 
 @app.route('/take-out', methods = ['POST'])
-def get_take_out_form_values():
+def get_and_save_take_out_form_values():
     takeOutName = request.form["name"]
     takeOutBillingAddress = request.form["billing-address"]
     takeOutTime = request.form["take-out-time"]
@@ -150,8 +150,12 @@ def show_luigipage():
 
 
 
+@app.route('/cart')
+def show_cart():
+    return render_template("cart.html")
 
-""" @app.route('/luigi')
+
+@app.route('/luigi')
 def index():
     return render_template("luigi.html")
 @app.route('/toggle_led', methods=['POST'])
@@ -167,6 +171,7 @@ def toggle_led():
         ser.write(led_command.encode())
         return jsonify({"message": f"{led_command} sent"}), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 500 """
+        return jsonify({"error": str(e)}), 500
+    
 if __name__ == '__main__':
     app.run(debug=True)

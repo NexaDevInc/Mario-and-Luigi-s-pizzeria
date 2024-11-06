@@ -10,7 +10,7 @@
         <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../static/css/styles_take-out.css">
         <link rel="icon" href="../static/img/logo.png">
-        <script src="blhElements/blhElements.js"></script>
+        <script src="../static/blhElements/blhElements.js"></script>
     </head>
     <body>
         <div id="container">
@@ -33,72 +33,11 @@
             <div id="pizza-editting-modal-aligner">
                 <div id="pizza-editting-modal">
                     <h2>
-                        Edit {pizza choice}
+                        ...
                     </h2>
                     <form action="#" id="pizza-editting-form">
-                        <div id="ingredients-group">
-                            <div class="ingredient" id="ingredient-">
-                                <p>
-                                    {Ingredient Name}
-                                </p>
-                                <blh-counter
-                                    blh-counter-input-placeholder="1"
-                                    blh-counter-input-minimum="0"
-                                    blh-counter-input-maximum="10"
-                                    blh-counter-input-step="1"
-                                    blh-counter-color="#58641D"
-                                    blh-counter-active-color="#F0EFF4"
-                                    blh-counter-background-color="transparent"
-                                    blh-counter-active-background-color="#58641D"
-                                ></blh-counter>
-                            </div>
-                            <div class="ingredient" id="ingredient-">
-                                <p>
-                                    {Ingredient Name}
-                                </p>
-                                <blh-counter
-                                    blh-counter-input-placeholder="1"
-                                    blh-counter-input-minimum="0"
-                                    blh-counter-input-maximum="10"
-                                    blh-counter-input-step="1"
-                                    blh-counter-color="#58641D"
-                                    blh-counter-active-color="#F0EFF4"
-                                    blh-counter-background-color="transparent"
-                                    blh-counter-active-background-color="#58641D"
-                                ></blh-counter>
-                            </div>
-                            <div class="ingredient" id="ingredient-">
-                                <p>
-                                    {Ingredient Name}
-                                </p>
-                                <blh-counter
-                                blh-counter-input-placeholder="1"
-                                blh-counter-input-minimum="0"
-                                blh-counter-input-maximum="10"
-                                blh-counter-input-step="1"
-                                blh-counter-color="#58641D"
-                                blh-counter-active-color="#F0EFF4"
-                                blh-counter-background-color="transparent"
-                                blh-counter-active-background-color="#58641D"
-                            ></blh-counter>
-                            </div>
-                            <div class="ingredient" id="ingredient-">
-                                <p>
-                                    {Ingredient Name}
-                                </p>
-                                <blh-counter
-                                    blh-counter-input-placeholder="1"
-                                    blh-counter-input-minimum="0"
-                                    blh-counter-input-maximum="10"
-                                    blh-counter-input-step="1"
-                                    blh-counter-color="#58641D"
-                                    blh-counter-active-color="#F0EFF4"
-                                    blh-counter-background-color="transparent"
-                                    blh-counter-active-background-color="#58641D"
-                                ></blh-counter>
-                            </div>
-                        </div>
-                        <button type="submit" id="save-button" onclick="closeModal()">
+                        <div id="ingredients-group"></div>
+                        <button type="submit" id="save-button" onclick="closeModal(), DisplayPizzaEdits()">
                             Save Changes
                         </button>
                     </form>
@@ -129,24 +68,11 @@
                             </Label>
                             <div id="pizza-choice-group">
                                 <i class="fa-solid fa-pencil" onclick="openModal()"></i>
-                                <select id="pizza-choice" name="pizza-choice">
-                                    <option value="Margherita">Margherita</option>
-                                    <option value="Pepperoni">Pepperoni</option>
-                                    <option value="BBQ Chicken">BBQ Chicken</option>
-                                    <option value="Veggie Deluxe">Veggie Deluxe</option>
-                                    <option value="Hawaiian">Hawaiian</option>
-                                    <option value="Four Cheese">Four Cheese</option>
-                                </select>
+
+                                <select id="pizza-choice" name="pizza-choice"></select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
-                            <div id="pizza-edits"></div>
                         </div>
-                     <!--    <div id="add-more-input">
-                            <button type="button" onclick="window.location.href = '#Add More'">
-                                <i class="fa-solid fa-plus"></i>
-                                Add more
-                            </button>
-                        </div> -->
                         <div id="billing-address-input">
                             <Label for="billing-address">
                                 <h3>
@@ -178,6 +104,7 @@
                             </button>
                         </div>
                     </form>
+                    <div id="added-ingredients"></div>
                 </div>
             </div>
         </div>
