@@ -7,6 +7,14 @@ import os
 import json
 app = Flask(__name__)
 
+OrderID = ""
+CostumerName = ""
+OrderTime = ""
+PizzaName = ""
+Intendedfor = ""
+Status = ""
+   
+    
 
 """ ser = serial.Serial("COM4", baudrate=9600, timeout=1) """
 
@@ -50,11 +58,13 @@ def get_delivery_form_values():
     deliveryZipCode = request.form["zip-code"]
     deliveryTime = request.form["delivery-time"]
     deliveryPizzaChoice = request.form["pizza-choice"]
-    status = "Delivery"
-
-    orders = load_data_from_json()
+    Intendedfor = "Delivery"
+    status = "Order placed"
     
-    newOrder = {'name': deliveryName, 'address': deliveryAddress, 'billing-address': deliveryBillingAddress, 'zip-code': deliveryZipCode, 'time': deliveryTime, 'pizza-choice': deliveryPizzaChoice, 'status': status}
+    orders = load_data_from_json()
+    order_id = str(len(orders) + 1)
+    
+    newOrder = {'id':order_id, 'name': deliveryName, 'address': deliveryAddress, 'billingaddress': deliveryBillingAddress, 'zipcode': deliveryZipCode, 'time': deliveryTime, 'pizzachoice': deliveryPizzaChoice, 'Intendedfor': Intendedfor, 'status': status}
     orders.append(newOrder)
 
     saveData_JSON(orders)
@@ -70,11 +80,13 @@ def get_take_out_form_values():
     takeOutBillingAddress = request.form["billing-address"]
     takeOutTime = request.form["take-out-time"]
     takeOutPizzaChoice = request.form["pizza-choice"]
-    status = "Take-Out"
-
+    Intendedfor = "Take-Out"
+    status = "Order placed"
     orders = load_data_from_json()
+  
+    order_id = str(len(orders) + 1)
     
-    newOrder = {'name': takeOutName, 'address': "", 'billing-address': takeOutBillingAddress, 'zip-code': "", 'time': takeOutTime, 'pizza-choice': takeOutPizzaChoice, 'status': status}
+    newOrder = {'id':order_id, 'name': takeOutName, 'address': "", 'billingaddress': takeOutBillingAddress, 'zipcode': "", 'time': takeOutTime, 'pizzachoice': takeOutPizzaChoice, 'Intendedfor': Intendedfor, 'status': status}
     orders.append(newOrder)
 
     saveData_JSON(orders)
@@ -91,10 +103,53 @@ def show_menu():
 @app.route('/cart')
 def show_cart():
     return render_template("cart.html")
+""" Luigi's Page """
+def renderLuigiPage():
+    global OrderID
+    global CostumerName
+    global OrderTime
+    global PizzaName
+    global Intendedfor
+    global Status
+
+    maxLength = 4
+    pizzaInOven = []
+    order = ""
+    orders = load_data_from_json()
+ 
+    for x in orders:
+        order = x
+
+    OrderID = order.id
+    CostumerName = order.name
+    OrderTime = order.time
+    PizzaName = order.pizzachoice
+    Intendedfor = order.Intendedfor
+    Status = order.status
+
+
+    if len(pizzaInOven) < maxLength:
+            pizzaInOven.append(order)
+    else: 
+        user_input = input("The any pizza is ready? ( Y | N ) ?:  ").strip().upper()
+        if user_input == "Y":
+            pizzaInOven.pop(0)
+
 
 @app.route('/luigi')
 def show_luigipage():
-    return render_template("luigi.html")
+    return render_template("luigi.html",
+                           pizzaName = PizzaName,
+                           OrderID = OrderID,
+                           OrderTime = OrderTime,
+                           CostumerName = CostumerName,
+                           Intendedfor = Intendedfor,
+                           Status = Status
+                           )
+
+
+
+
 
 """ @app.route('/luigi')
 def index():

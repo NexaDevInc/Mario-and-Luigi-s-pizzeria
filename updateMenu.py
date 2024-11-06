@@ -6,8 +6,9 @@ newFood_Blueprint = Blueprint('newfood', __name__)
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, 'data')
-json_file_path = os.path.join(DATA_DIR, 'Menu.json')
+DATA_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(DATA_DIR, 'data')
+json_file_path = os.path.join(STATIC_DIR, 'Menu.json')
 
 
 if not os.path.exists(DATA_DIR):

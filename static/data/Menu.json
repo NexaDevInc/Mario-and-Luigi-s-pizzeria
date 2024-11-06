@@ -691,499 +691,86 @@
         ]
     },
     {
-        "pizza_id": "9",
-        "name": "123",
-        "description": "123",
+        "pizza_id": "29",
+        "name": "qwerty",
+        "description": "qwerty",
         "ingredients": [
+            "Cheese",
             "Olives"
         ],
         "size_options": [
             {
                 "size": "small",
-                "price": 123.0
+                "price": 9.9
             },
             {
                 "size": "medium",
-                "price": 123.0
+                "price": 10.9
             },
             {
                 "size": "large",
-                "price": 123.0
+                "price": 11.9
             }
         ],
-        "vegetarian": false,
-        "calories": 123
-    },
-    {
-        "pizza_id": "10",
-        "name": "lol",
-        "description": "fdsfdsd",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
+        "vegetarian": null,
+        "calories": 911,
+        "available_toppings": [
             {
-                "size": "small",
-                "price": 234.0
+                "topping": "Pepperoni ",
+                "price": 1.5
             },
             {
-                "size": "medium",
-                "price": 234.0
+                "topping": "Mushrooms",
+                "price": 1.0
             },
             {
-                "size": "large",
-                "price": 234.0
+                "topping": "Onions",
+                "price": 1.2
+            },
+            {
+                "topping": "Bacon",
+                "price": 1.2
+            },
+            {
+                "topping": "Extra Cheese",
+                "price": 1.2
+            },
+            {
+                "topping": "Black Olives",
+                "price": 1.2
+            },
+            {
+                "topping": "Green Peppers",
+                "price": 1.2
+            },
+            {
+                "topping": "Pineapple",
+                "price": 1.2
+            },
+            {
+                "topping": "Spinach",
+                "price": 1.2
+            },
+            {
+                "topping": "Anchovies",
+                "price": 1.2
+            },
+            {
+                "topping": "Garlic",
+                "price": 1.2
+            },
+            {
+                "topping": "Tomatoes",
+                "price": 1.2
+            },
+            {
+                "topping": "Artichokes",
+                "price": 1.2
+            },
+            {
+                "topping": "Basil",
+                "price": 1.2
             }
-        ],
-        "vegetarian": true,
-        "calories": 234
-    },
-    {
-        "pizza_id": "11",
-        "name": "eww",
-        "description": "wet",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 232.0
-            },
-            {
-                "size": "medium",
-                "price": 21.0
-            },
-            {
-                "size": "large",
-                "price": 23.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 213
-    },
-    {
-        "pizza_id": "12",
-        "name": "vdfss",
-        "description": "fdsfsd",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 213.0
-            },
-            {
-                "size": "medium",
-                "price": 321.0
-            },
-            {
-                "size": "large",
-                "price": 123.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 321
-    },
-    {
-        "pizza_id": "13",
-        "name": "hgvc",
-        "description": "hjk",
-        "ingredients": [
-            "Pepperoni",
-            "Olives"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 765.0
-            },
-            {
-                "size": "medium",
-                "price": 34.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 234
-    },
-    {
-        "pizza_id": "14",
-        "name": "awed",
-        "description": "dasad",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 32.0
-            },
-            {
-                "size": "medium",
-                "price": 423.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 234
-    },
-    {
-        "pizza_id": "15",
-        "name": "pdf",
-        "description": "sad",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 321.0
-            },
-            {
-                "size": "medium",
-                "price": 123.0
-            },
-            {
-                "size": "large",
-                "price": 123.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 132
-    },
-    {
-        "pizza_id": "16",
-        "name": "eww",
-        "description": "awe",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 321.0
-            },
-            {
-                "size": "medium",
-                "price": 132.0
-            },
-            {
-                "size": "large",
-                "price": 132.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 132
-    },
-    {
-        "pizza_id": "17",
-        "name": "Feds",
-        "description": "erase",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 423.0
-            },
-            {
-                "size": "medium",
-                "price": 234.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 423
-    },
-    {
-        "pizza_id": "18",
-        "name": "sdsdf",
-        "description": "dfsfsd",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 23.0
-            },
-            {
-                "size": "medium",
-                "price": 123.0
-            },
-            {
-                "size": "large",
-                "price": 123.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 123
-    },
-    {
-        "pizza_id": "19",
-        "name": "ererwr",
-        "description": "werwe",
-        "ingredients": [
-            "Cheese"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 123.0
-            },
-            {
-                "size": "medium",
-                "price": 123.0
-            },
-            {
-                "size": "large",
-                "price": 123.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 123
-    },
-    {
-        "pizza_id": "20",
-        "name": "erfef",
-        "description": "rear",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 342.0
-            },
-            {
-                "size": "medium",
-                "price": 243.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 243
-    },
-    {
-        "pizza_id": "21",
-        "name": "ertgtr",
-        "description": "erter",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 324.0
-            },
-            {
-                "size": "medium",
-                "price": 234.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 234
-    },
-    {
-        "pizza_id": "22",
-        "name": "ertgtr",
-        "description": "erter",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 324.0
-            },
-            {
-                "size": "medium",
-                "price": 234.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 234
-    },
-    {
-        "pizza_id": "23",
-        "name": "erfref",
-        "description": "erte",
-        "ingredients": [
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 324.0
-            },
-            {
-                "size": "medium",
-                "price": 234.0
-            },
-            {
-                "size": "large",
-                "price": 234.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 342
-    },
-    {
-        "pizza_id": "24",
-        "name": "we're",
-        "description": "ewww",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 232.0
-            },
-            {
-                "size": "medium",
-                "price": 321.0
-            },
-            {
-                "size": "large",
-                "price": 123.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 123
-    },
-    {
-        "pizza_id": "25",
-        "name": "qweqw",
-        "description": "we're",
-        "ingredients": [
-            "Cheese"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 213.0
-            },
-            {
-                "size": "medium",
-                "price": 231.0
-            },
-            {
-                "size": "large",
-                "price": 123.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 123
-    },
-    {
-        "pizza_id": "26",
-        "name": "awe",
-        "description": "ear",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 23.0
-            },
-            {
-                "size": "medium",
-                "price": 132.0
-            },
-            {
-                "size": "large",
-                "price": 312.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 132
-    },
-    {
-        "pizza_id": "27",
-        "name": "wearer",
-        "description": "erter",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 123.0
-            },
-            {
-                "size": "medium",
-                "price": 321.0
-            },
-            {
-                "size": "large",
-                "price": 132.0
-            }
-        ],
-        "vegetarian": false,
-        "calories": 123
-    },
-    {
-        "pizza_id": "28",
-        "name": "ewer",
-        "description": "were",
-        "ingredients": [
-            "Cheese",
-            "Pepperoni"
-        ],
-        "size_options": [
-            {
-                "size": "small",
-                "price": 324.0
-            },
-            {
-                "size": "medium",
-                "price": 234.0
-            },
-            {
-                "size": "large",
-                "price": 423.0
-            }
-        ],
-        "vegetarian": true,
-        "calories": 234
+        ]
     }
 ]

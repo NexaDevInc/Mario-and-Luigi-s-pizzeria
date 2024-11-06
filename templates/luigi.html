@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/7dee9b0f32.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/css/styles luigi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        const orders_path = "{{ url_for('static', filename='data/orders.json') }}";
+    </script>
+    <script type="module" src="{{ url_for('static', filename='js/luigisMain.js') }}"></script>
 </head>
+
 <body>
     <div class="header">
         <div class="admin"> Admin </div>
         <div class="account">Current Employee: <span>Luigi</span> <i class="fa-regular fa-user"></i></div>
     </div>
-    
+
+    <div class="sidebar">
+        <p>Pizza Making</p>
+        <p>-Orders</p>
+        <div class="line"></div>
+    </div>
     <div class="global-grid">
-        <div class="sidebar">
-            <p>Pizza Making</p>
-            <p>-Orders</p>
-            <div class="line"></div>
-        </div>
         <div class="global-element">
+
             <div class="grid_container">
                 <div class="grid_item">
                     <img src="../static/img/oven.png" alt="oven1">
                     <span id="redTimer">15:00</span>
                 </div>
-                
+
                 <div class="grid_item">
                     <img src="../static/img/oven.png" alt="oven2">
                     <span id="greenTimer">15:00</span>
@@ -39,19 +48,21 @@
                     <img src="../static/img/oven.png" alt="oven3">
                     <span id="blueTimer">15:00</span>
                 </div>
-                
+
                 <div class="grid_item">
                     <img src="../static/img/oven.png" alt="oven4">
                     <span id="yellowTimer">15:00</span>
                 </div>
             </div>
-            <h2>Ovens</h2>
             <div class="grid">
                 <div class="element">
-                    <h3>{Pizza name}</h3>
-                    <p>Pizza name: {Pizza Name}</p>
-                    <p>Order time: {Order Time}</p>
-                    <p>Customer: {Customer Name}, {Customer Address}</p>
+                    <h3>{{pizzaName}}</h3>
+                    <p>Pizza name: {{pizzaName}}</p>
+                    <p>Order time: {{OrderTime}}</p>
+                    <p>Customer: {{CostumerName}}</p>
+                    <p>Intende for: {{Intendefor}}</p>
+                    <p>Status: {{Status}}</p>
+                    <p>OrderID: {{OrderID}}</p>
                     <div class="button-container">
                         <button id="redButtonStart" onclick="toggleLED('RedLedOn')">Oven 1 start</button>
                         <button id="redButtonStop" onclick="toggleLED('RedLedOff')">Oven 1 stop</button>
@@ -69,6 +80,7 @@
                         <button id="greenButtonReset">Reset oven 2 timer</button>
                     </div>
                 </div>
+                
                 <div class="element">
                     <h3>{Pizza name}</h3>
                     <p>Pizza name: {Pizza Name}</p>
@@ -91,9 +103,12 @@
                         <button id="yellowButtonReset">Reset oven 4 timer</button>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
+    </div>
+    <div id="newOrders">
     </div>
     <script src="../static/js/script_oven.js"></script>
 </body>
+
 </html>

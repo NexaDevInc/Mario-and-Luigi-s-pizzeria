@@ -1,5 +1,5 @@
 import Model from "../model/Model.js"
-import DeliveryView from "../view/DeliveryDropdown.js";
+
 import MenuItems from "../view/MenuItemsView.js";
 
 class MenuController{

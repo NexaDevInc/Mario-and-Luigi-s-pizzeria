@@ -87,6 +87,7 @@ body {
     padding: var(--margin);
     border-radius: var(--padding-borderRadius-input);
     width: calc(25% - 50px); 
+    margin: 50px;
 }
 
 .element h3 {

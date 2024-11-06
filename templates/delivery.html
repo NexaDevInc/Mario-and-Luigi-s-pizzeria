@@ -106,7 +106,7 @@
             </div>
             <div id="content">
                 <div id="sidebar">
-                    <button type="button" id="back-button" onclick="window.location.href = '#Back'">
+                    <button type="button" id="back-button" onclick="window.location.href = '/'">
                         <i class="fa-solid fa-chevron-left"></i>
                         Back
                     </button>
@@ -146,19 +146,26 @@
                             <div id="pizza-choice-group">
                                 <i class="fa-solid fa-pencil" onclick="openModal()"></i>
                                 <select id="pizza-choice" name="pizza-choice">
-                                    <option value="1">{pizza choice}</option>
-                                    <option value="2">{pizza choice}</option>
-                                    <option value="3">{pizza choice}</option>
-                                    <option value="4">{pizza choice}</option>
+                                    <option value="Margherita">Margherita</option>
+                                    <option value="Pepperoni">Pepperoni</option>
+                                    <option value="BBQ Chicken">BBQ Chicken</option>
+                                    <option value="Veggie Deluxe">Veggie Deluxe</option>
+                                    <option value="Hawaiian">Hawaiian</option>
+                                    <option value="Four Cheese">Four Cheese</option>
                                 </select>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div id="pizza-edits"></div>
                         </div>
-                        <div>
-                            <input type="radio" name="" id="size" value="small">Small
-                            <input type="radio" name="" id="size" value="medium">Medium 
-                            <input type="radio" name="" id="size" value="large">Large
+                        <div id="pizza-size-group">
+                            <input type="radio" name="pizza-size" id="size-small" value="small">
+                            <label for="size-small">Small</label>
+                            
+                            <input type="radio" name="pizza-size" id="size-medium" value="medium">
+                            <label for="size-medium">Medium</label>
+                            
+                            <input type="radio" name="pizza-size" id="size-large" value="large">
+                            <label for="size-large">Large</label>
                         </div>
                         <div id="address-same-input" role="checkbox" aria-checked="false">
                             <input type="checkbox" id="checkbox">

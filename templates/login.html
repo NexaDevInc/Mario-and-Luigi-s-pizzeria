@@ -17,13 +17,20 @@
         Admin Login
     </h1>
     <form action="/login" method="post">
-        {% with messages = get_flashed_messages(with_categories=true) %}
+    <!--     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
         {% for category, message in messages %}
         <div class="alert alert-{{ category }}">{{ message }}</div>
         {% endfor %}
         {% endif %}
-        {% endwith %}
+        {% endwith %} -->
+
+        <div id="sidebar">
+            <button type="button" id="back-button" onclick="window.location.href = '/'">
+                <i class="fa-solid fa-chevron-left"></i>
+                Back
+            </button>
+        </div>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Enter your username..." required>
 
