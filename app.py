@@ -8,7 +8,7 @@ import json
 app = Flask(__name__)
 
 
-""" ser = serial.Serial("COM4", baudrate=9600, timeout=1) """
+ser = serial.Serial("COM4", baudrate=9600, timeout=1)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'static')
@@ -88,11 +88,11 @@ def show_home():
 def show_menu():
     return render_template("menu.html")
 
-""" @app.route('/cart')
+@app.route('/cart')
 def show_menu():
-    return render_template("cart.html") """
+    return render_template("cart.html")
 
-""" @app.route('/luigi')
+@app.route('/luigi')
 def index():
     return render_template("luigi.html")
 @app.route('/toggle_led', methods=['POST'])
@@ -108,6 +108,7 @@ def toggle_led():
         ser.write(led_command.encode())
         return jsonify({"message": f"{led_command} sent"}), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 500 """
+        return jsonify({"error": str(e)}), 500
+    
 if __name__ == '__main__':
     app.run(debug=True)
