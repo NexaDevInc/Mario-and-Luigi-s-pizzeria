@@ -43,7 +43,7 @@ def show_deliveryPage():
     return render_template("delivery.html")
 
 @app.route('/delivery', methods = ['POST'])
-def get_delivery_form_values():
+def get_and_save_delivery_form_values():
     deliveryName = request.form["name"]
     deliveryAddress = request.form["address"]
     deliveryBillingAddress = request.form["billing-address"]
@@ -65,7 +65,7 @@ def show_takeoutPage():
     return render_template("take-out.html")
 
 @app.route('/take-out', methods = ['POST'])
-def get_take_out_form_values():
+def get_and_save_take_out_form_values():
     takeOutName = request.form["name"]
     takeOutBillingAddress = request.form["billing-address"]
     takeOutTime = request.form["take-out-time"]

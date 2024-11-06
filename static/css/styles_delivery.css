@@ -123,12 +123,7 @@ button:hover {
     grid-area: pizza-choice;
     display: flex;
     flex-direction: column;
-}
-
-#add-more-input {
-    grid-area: add-more;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 25px;
 }
 
 #address-same-input {
@@ -207,6 +202,8 @@ select {
     background-color: rgba(0, 0, 0, 0.5);
 }
 #pizza-editting-modal {
+    display: flex;
+    flex-direction: column;
     color: var(--color2);
     background-color: var(--color1);
     padding: 25px;
@@ -230,6 +227,7 @@ h2 {
 .ingredient {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 25px;
 }
 
