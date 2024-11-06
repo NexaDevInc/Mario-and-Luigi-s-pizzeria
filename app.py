@@ -8,7 +8,7 @@ import json
 app = Flask(__name__)
 
 
-# ser = serial.Serial("/dev/cu.usbserial-1120", baudrate=9600, timeout=1)
+""" ser = serial.Serial("COM4", baudrate=9600, timeout=1) """
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'static')
@@ -96,28 +96,22 @@ def show_cart():
 def show_luigipage():
     return render_template("luigi.html")
 
-# @app.route('/oven')
-# def index():
-#     return render_template("oven.html")
-
-# @app.route('/toggle_led', methods=['POST'])
-# def toggle_led():
-#     try:
-#         # Receive the LED command from the request
-#         data = request.get_json()
-#         led_command = data.get("led_command")
-        
-#         # Ensure the serial port is open
-#         if not ser.is_open:
-#             ser.open()
-
-#         # Send the command to the Arduino
-#         ser.write(led_command.encode())
-
-#         return jsonify({"message": f"{led_command} sent"}), 200
-#     except Exception as e:
-#         return jsonify({"error": str(e)}), 500
-
-
+""" @app.route('/luigi')
+def index():
+    return render_template("luigi.html")
+@app.route('/toggle_led', methods=['POST'])
+def toggle_led():
+    try:
+        # Receive the LED command from the request
+        data = request.get_json()
+        led_command = data.get("led_command")
+        # Ensure the serial port is open
+        if not ser.is_open:
+            ser.open()
+        # Send the command to the Arduino
+        ser.write(led_command.encode())
+        return jsonify({"message": f"{led_command} sent"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500 """
 if __name__ == '__main__':
     app.run(debug=True)
