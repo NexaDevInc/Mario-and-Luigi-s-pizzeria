@@ -88,9 +88,13 @@ def show_home():
 def show_menu():
     return render_template("menu.html")
 
-""" @app.route('/cart')
-def show_menu():
-    return render_template("cart.html") """
+@app.route('/cart')
+def show_cart():
+    return render_template("cart.html")
+
+@app.route('/luigi')
+def show_luigipage():
+    return render_template("luigi.html")
 
 # @app.route('/oven')
 # def index():
