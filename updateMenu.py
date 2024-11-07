@@ -82,6 +82,6 @@ def add_new_pizza():
 
     save_data_json(pizza_data)
     flash('Pizza added successfully!')
-    return redirect('/newfood')
+    return redirect('/mario')
 
 

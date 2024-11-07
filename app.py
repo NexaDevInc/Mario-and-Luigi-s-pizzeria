@@ -16,8 +16,8 @@ Status = ""
    
     
 
-ser = serial.Serial("COM3", baudrate=9600, timeout=1)
-
+""" ser = serial.Serial("COM3", baudrate=9600, timeout=1)
+ """
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_DIR = os.path.join(DATA_DIR, 'data')
@@ -124,12 +124,7 @@ def renderLuigiPage():
     Status = order.status
 
 
-    if len(pizzaInOven) < maxLength:
-            pizzaInOven.append(order)
-    else: 
-        user_input = input("The any pizza is ready? ( Y | N ) ?:  ").strip().upper()
-        if user_input == "Y":
-            pizzaInOven.pop(0)
+   
 
 
 @app.route('/luigi')
@@ -154,7 +149,7 @@ def show_cart():
 @app.route('/luigi')
 def index():
     return render_template("luigi.html")
-@app.route('/toggle_led', methods=['POST'])
+""" @app.route('/toggle_led', methods=['POST'])
 def toggle_led():
     try:
         # Receive the LED command from the request
@@ -167,7 +162,7 @@ def toggle_led():
         ser.write(led_command.encode())
         return jsonify({"message": f"{led_command} sent"}), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": str(e)}), 500 """
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
