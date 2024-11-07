@@ -16,7 +16,7 @@ Status = ""
    
     
 
-ser = serial.Serial("COM4", baudrate=9600, timeout=1)
+ser = serial.Serial("COM3", baudrate=9600, timeout=1)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'static')
@@ -99,10 +99,6 @@ def show_home():
 @app.route('/menu')
 def show_menu():
     return render_template("menu.html")
-
-@app.route('/cart')
-def show_cart():
-    return render_template("cart.html")
 """ Luigi's Page """
 def renderLuigiPage():
     global OrderID
