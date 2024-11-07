@@ -60,33 +60,6 @@ class OrderView {
         }
     }
     
-    
-    startTimer(timerElement, timerIndex) {
-        let remainingTime = 15 * 60; // 15 perc másodpercben
-        const countdownElem = timerElement.find('.countdown');
-
-        const interval = setInterval(() => {
-            remainingTime -= 1;
-            const minutes = Math.floor(remainingTime / 60);
-            const seconds = remainingTime % 60;
-            countdownElem.text(`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`);
-
-            if (remainingTime <= 0) {
-                clearInterval(interval);
-                alert(`Időzítő ${timerIndex + 1} lejárt! Reseteld az időzítőt.`);
-                timerElement.find('.reset-timer').prop('disabled', false); // Reset gomb engedélyezése
-            }
-        }, 1000);
-    }
-
-    resetTimer(timerElement, timerIndex) {
-        // Időzítő visszaállítása és rendelés törlése az időzítőből
-        timerElement.find('.countdown').text('15:00');
-        timerElement.find('.order-info').empty(); // Törli a rendelési adatokat
-        this.#inProgressList[timerIndex] = 0; // Az időzítőt szabaddá teszi
-        timerElement.find('.start-timer').prop('disabled', true); // Indítógomb tiltása
-        timerElement.find('.reset-timer').prop('disabled', true); // Reset gomb tiltása
-    }
 }
 
 export default OrderView;
